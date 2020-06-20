@@ -1,5 +1,6 @@
 SRCS	= main.cpp\
-		  Contact.cpp
+		  Contact.cpp\
+		  utils.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 CC		= clang++

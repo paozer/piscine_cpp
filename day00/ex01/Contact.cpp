@@ -36,15 +36,15 @@ std::string Contact::get_login(void)
 
 void Contact::str(void)
 {
-	std::cout << '[' << first_name << ']' << '\n';
-	std::cout << '[' << last_name << ']' << '\n';
-	std::cout << '[' << nickname << ']' << '\n';
-	std::cout << '[' << login << ']' << '\n';
-	std::cout << '[' << postal_address << ']' << '\n';
-	std::cout << '[' << email_address << ']' << '\n';
-	std::cout << '[' << phone_number << ']' << '\n';
-	std::cout << '[' << birthday_date << ']' << '\n';
-	std::cout << '[' << favorite_meal << ']' << '\n';
-	std::cout << '[' << underwear_color << ']' << '\n';
-	std::cout << '[' << darkest_secret << ']' << '\n';
+	std::cout << first_name << '\n';
+	std::cout << last_name << '\n';
+	std::cout << nickname << '\n';
+	std::cout << login << '\n';
+	std::cout << postal_address << '\n';
+	std::cout << email_address << '\n';
+	std::cout << phone_number << '\n';
+	std::cout << birthday_date << '\n';
+	std::cout << favorite_meal << '\n';
+	std::cout << underwear_color << '\n';
+	std::cout << darkest_secret << '\n';
 }

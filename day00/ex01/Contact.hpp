@@ -1,5 +1,8 @@
-#include <iostream>
-#include <iomanip>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+# include <iostream>
+# include <iomanip>
 
 class Contact {
 	private:
@@ -23,3 +26,5 @@ class Contact {
 		std::string get_last_name(void);
 		std::string get_login(void);
 };
+
+#endif
