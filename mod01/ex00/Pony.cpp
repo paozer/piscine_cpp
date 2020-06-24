@@ -12,32 +12,23 @@
 
 #include "Pony.hpp"
 
-Pony::Pony(void) { std::cout << "Object created.\n"; }
-Pony::~Pony(void) { std::cout << "Object destroyed.\n"; }
-void	Pony::set_name(std::string name) { _name = name; }
-void	Pony::set_color(std::string color) { _color = color; }
-void	Pony::set_age(int age) { _age = age; }
-void	Pony::set_height(int height) { _height = height; }
-
-void Pony::ponyOnTheStack(std::string name, std::string color, int age, int height)
+Pony::Pony(std::string name, std::string color, int age, int height)
+	: _name(name), _color(color), _age(age), _height(height)
 {
-	Pony my_pony;
+	std::cout << "Object created.\n";
+}
 
-	my_pony.set_name(name);
-	my_pony.set_color(color);
-	my_pony.set_age(age);
-	my_pony.set_height(height);
+Pony::~Pony(void) { std::cout << "Object destroyed.\n"; }
+
+void	Pony::ponyOnTheStack(std::string name, std::string color, int age, int height)
+{
+	Pony my_pony (name, color, age, height);
 	std::cout << my_pony.repr() << std::endl;
 }
 
-void Pony::ponyOnTheHeap(std::string name, std::string color, int age, int height)
+void	Pony::ponyOnTheHeap(std::string name, std::string color, int age, int height)
 {
-	Pony* my_pony = new Pony;
-
-	my_pony->set_name(name);
-	my_pony->set_color(color);
-	my_pony->set_age(age);
-	my_pony->set_height(height);
+	Pony* my_pony = new Pony (name, color, age, height);
 	std::cout << my_pony->repr() << std::endl;
 	delete my_pony;
 }

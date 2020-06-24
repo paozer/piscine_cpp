@@ -15,8 +15,10 @@
 
 int main(void)
 {
+	std::cout << "this is main talking\n\n";
 	Pony::ponyOnTheStack("John", "Green", 10, 129);
-	std::cout << std::endl;
+	std::cout << "\nthis is main talking\n\n";
 	Pony::ponyOnTheHeap("Doe", "Brown", 1, 25);
+	std::cout << "\nthis is main talking\n";
 	return (0);
 }
