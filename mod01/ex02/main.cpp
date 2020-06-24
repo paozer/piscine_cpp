@@ -17,6 +17,7 @@ int main(void)
 {
 	ZombieEvent ze;
 
+	std::srand(time(nullptr));
 	std::cout << "Type is [really angry]\n";
 	ze.setZombieType("really angry");
 	ze.randomChump();

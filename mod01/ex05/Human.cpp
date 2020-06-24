@@ -12,9 +12,6 @@
 
 #include "Human.hpp"
 
-const Brain& Human::getBrain(void)
-{
-	return (_brain);
-}
+const Brain& Human::getBrain(void) { return (_brain); }
 
 std::string Human::identity(void) { return (_brain.identity()); }

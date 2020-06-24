@@ -18,12 +18,12 @@
 
 class Brain
 {
-   public:
-      Brain();
-	  const std::string identity(void) const;
+	public:
+		Brain(void);
+		const std::string identity(void) const;
 
-   private:
-	  int neurons;
+	private:
+		int neurons;
 };
 
 #endif

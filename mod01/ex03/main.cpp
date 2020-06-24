@@ -15,7 +15,7 @@
 
 int main(void)
 {
-	ZombieHorde();
+	std::srand(time(nullptr));
 	ZombieHorde zh0 = ZombieHorde(5);
 	zh0.announce();
 	std::cout << std::endl;

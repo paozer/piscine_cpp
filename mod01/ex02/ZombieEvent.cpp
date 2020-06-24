@@ -12,16 +12,9 @@
 
 #include "ZombieEvent.hpp"
 
-// sets seed for random values sequence
-ZombieEvent::ZombieEvent() { std::srand(time(nullptr)); }
-
 void	ZombieEvent::setZombieType(std::string type) { _type = type; }
 
-Zombie* ZombieEvent::newZombie(std::string name)
-{
-	Zombie* z = new Zombie(name, _type);
-	return (z);
-}
+Zombie* ZombieEvent::newZombie(std::string name) { return (new Zombie(name, _type)); }
 
 void	ZombieEvent::randomChump(void)
 {

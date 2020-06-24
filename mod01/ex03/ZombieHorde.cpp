@@ -12,9 +12,6 @@
 
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(void) { std::srand(time(nullptr)); }
-ZombieHorde::~ZombieHorde(void) { delete[] zb; }
-
 ZombieHorde::ZombieHorde(int n)
 {
 	std::string name[5] = {"Xorg", "Pepe", "Angry", "Maria", "Ben"};
@@ -25,6 +22,8 @@ ZombieHorde::ZombieHorde(int n)
 		zb[i] = Zombie(name[rand() % 5], "more_brainz");
 	}
 }
+
+ZombieHorde::~ZombieHorde(void) { delete[] zb; }
 
 void ZombieHorde::announce(void)
 {

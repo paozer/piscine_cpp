@@ -12,7 +12,7 @@
 
 #include "Brain.hpp"
 
-Brain::Brain() : neurons(41) { ++neurons; }
+Brain::Brain(void) : neurons(41) { ++neurons; }
 
 const std::string	Brain::identity(void) const
 {
