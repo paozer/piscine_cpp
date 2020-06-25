@@ -23,9 +23,9 @@ class Zombie
 
 
 	public:
-		Zombie(void);
+		Zombie();
 		Zombie(std::string name, std::string type);
-		void announce(void);
+		void announce();
 };
 
 #endif

@@ -25,8 +25,8 @@ class ZombieHorde
 
 	public:
 		ZombieHorde(int n);
-		~ZombieHorde(void);
-		void announce(void);
+		~ZombieHorde();
+		void announce();
 };
 
 #endif

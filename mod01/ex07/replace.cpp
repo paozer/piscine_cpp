@@ -6,13 +6,13 @@
 /*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 16:34:51 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/24 22:25:15 by pramella         ###   ########lyon.fr   */
+/*   Updated: 2020/06/25 17:28:41 by pramella         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <cstring>
 
 int main(int ac, char *av[])
 {
