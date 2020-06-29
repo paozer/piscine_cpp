@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/29 17:58:21 by pramella          #+#    #+#             */
+/*   Updated: 2020/06/29 17:58:22 by pramella         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -38,15 +50,18 @@ class Fixed
 		int toInt(void) const;
 		float toFloat(void) const;
 
+		static Fixed& max(Fixed& a, Fixed& b);
+		static Fixed& min(Fixed& a, Fixed& b);
+
 	private:
 		int fixed_point_value;
 		static const int binary_point = 8;
 };
 
-// can't be member fct because first arg is stream not Fixed&
-std::ostream& operator<<(std::ostream& os, const Fixed& f);
-
+/* NON-MEMBER FUNCTIONS */
 Fixed& min(Fixed& a, Fixed& b);
 Fixed& max(Fixed& a, Fixed& b);
+// can't be member fct because first arg is stream not Fixed&
+std::ostream& operator<<(std::ostream& os, const Fixed& f);
 
 #endif
