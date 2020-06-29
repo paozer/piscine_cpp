@@ -6,7 +6,7 @@
 /*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 17:11:27 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/27 17:11:28 by pramella         ###   ########lyon.fr   */
+/*   Updated: 2020/06/29 17:58:15 by pramella         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 Fixed::Fixed() : fixed_point_value(0) {}
 
-// moves bits up binary_point positions
 Fixed::Fixed(const int nb) : fixed_point_value(nb << binary_point) {}
 
-// loss of precision
 Fixed::Fixed(const float nb) : fixed_point_value(roundf(nb * (1 << binary_point))) {}
 
-Fixed::~Fixed() {}
-
 Fixed::Fixed(const Fixed& other) { this->setRawBits(other.getRawBits()); }
+
+Fixed::~Fixed() {}
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
