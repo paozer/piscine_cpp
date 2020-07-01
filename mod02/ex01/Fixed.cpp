@@ -12,6 +12,8 @@
 
 #include "Fixed.hpp"
 
+const int Fixed::binary_point = 8;
+
 Fixed::Fixed() : fixed_point_value(0) {}
 
 Fixed::Fixed(const int nb) : fixed_point_value(nb << binary_point) {}

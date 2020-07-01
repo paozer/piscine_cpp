@@ -36,7 +36,7 @@ class Fixed
 
 	private:
 		int fixed_point_value;
-		static const int binary_point = 8;
+		static const int binary_point;
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f);
