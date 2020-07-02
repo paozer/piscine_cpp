@@ -21,13 +21,13 @@ class FragTrap
 {
 	public:
 		FragTrap();
-		FragTrap(std::string name);
+		FragTrap(const std::string& name);
 		FragTrap(const FragTrap&);
 		~FragTrap();
 		FragTrap& operator=(const FragTrap&);
 
-		void rangedAttack(std::string const& target);
-		void meleeAttack(std::string const& target);
+		void rangedAttack(std::string const& target) const;
+		void meleeAttack(std::string const& target) const;
 		void vaulthunter_dot_exe(std::string const& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

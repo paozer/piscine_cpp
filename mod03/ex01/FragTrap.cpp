@@ -19,7 +19,7 @@ FragTrap::FragTrap() :
 	_ranged_attack_damage(20), _armor_damage_reduction(5)
 { std::cout << "Default FragTrap Constructor" << std::endl; }
 
-FragTrap::FragTrap(std::string name) :
+FragTrap::FragTrap(const std::string& name) :
 	_name(name), _hit_points(100), _max_hit_points(100),
 	_energy_points(100), _max_energy_points(100), _level(1),
 	_melee_attack_damage(30), _ranged_attack_damage(20),
@@ -50,12 +50,12 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 }
 
 /* MEMBER FUNCTIONS */
-void FragTrap::rangedAttack(std::string const& target)
+void FragTrap::rangedAttack(std::string const& target) const
 {
 	std::cout << "FR4G-TP " << _name << " attacks " << target << " at range, causing " << _ranged_attack_damage << " points of damage" << std::endl;
 }
 
-void FragTrap::meleeAttack(std::string const& target)
+void FragTrap::meleeAttack(std::string const& target) const
 {
 	std::cout << "FR4G-TP " << _name << " attacks " << target << " in melee, causing " << _melee_attack_damage << " points of damage" << std::endl;
 }

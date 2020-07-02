@@ -51,12 +51,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 }
 
 /* MEMBER FUNCTIONS */
-void ScavTrap::rangedAttack(std::string const& target)
+void ScavTrap::rangedAttack(std::string const& target) const
 {
 	std::cout << "SC4V-TP " << _name << " attacks " << target << " at range, causing " << _ranged_attack_damage << " points of damage" << std::endl;
 }
 
-void ScavTrap::meleeAttack(std::string const& target)
+void ScavTrap::meleeAttack(std::string const& target) const
 {
 	std::cout << "SC4V-TP " << _name << " attacks " << target << " in melee, causing " << _melee_attack_damage << " points of damage" << std::endl;
 }
