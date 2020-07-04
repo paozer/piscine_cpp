@@ -24,15 +24,13 @@ class Fixed
 		Fixed(const int nb);
 		Fixed(const float nb);
 		~Fixed();
-
 		Fixed(const Fixed& other);
 		Fixed& operator=(const Fixed& other);
 
-		int getRawBits(void) const;
+		int getRawBits() const;
 		void setRawBits(int const raw);
-
-		int toInt(void) const;
-		float toFloat(void) const;
+		int toInt() const;
+		float toFloat() const;
 
 	private:
 		int fixed_point_value;

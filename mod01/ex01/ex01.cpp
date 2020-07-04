@@ -1,6 +1,6 @@
 #include <iostream>
 
-void memoryLeak(void)
+void memoryLeak()
 {
 	std::string* panther = new std::string("String panther");
 

@@ -18,9 +18,7 @@ SuperTrap::SuperTrap()
 
 SuperTrap::SuperTrap(const std::string& name) :
 	ClapTrap(name, "SUP3R-TP", 100, 100, 120, 120, 1, 60, 20, 5)
-{
-	std::cout << "String SuperTrap Constructor" << std::endl;
-}
+{ std::cout << "String SuperTrap Constructor" << std::endl; }
 
 SuperTrap::~SuperTrap()
 { std::cout << "Default SuperTrap Destructor" << std::endl; }

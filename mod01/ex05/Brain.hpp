@@ -19,7 +19,7 @@
 class Brain
 {
 	public:
-		Brain(void);
+		Brain();
 		const std::string identity(void) const;
 
 	private:

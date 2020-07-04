@@ -18,8 +18,8 @@
 class Human
 {
    public:
-	  const Brain& getBrain(void);
-	  std::string identity(void);
+	  const Brain& getBrain();
+	  std::string identity();
 
    private:
 	  const Brain _brain;

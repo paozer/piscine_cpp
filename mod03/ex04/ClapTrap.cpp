@@ -40,7 +40,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
 	std::cout << "Assignment ClapTrap Operator" << std::endl;
 	if (this != &other) {
-		std::cout << "yuuuuuup\n";
 		_hit_points = other._hit_points;
 		_max_hit_points = other._max_hit_points;
 		_energy_points = other._energy_points;

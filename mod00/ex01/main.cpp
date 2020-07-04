@@ -14,17 +14,19 @@
 
 int		main(void)
 {
-	Contact pb[8];
-	int		pb_size = 0;
+	Contact		pb[8];
+	int			pb_size = 0;
+	std::string	cmd;
 
-	std::string cmd = "INIT";
-	std::cout << "usage:\n- ADD\n- SEARCH (view/select from Phonebook)\n- EXIT\n\n";
-	while (cmd != "EXIT") {
+	std::cout << "usage:" << std::endl << "- ADD" << std::endl <<
+		"- SEARCH (view/select from Phonebook)" << std::endl << "- EXIT"
+		<< std::endl << std::endl;
+	do {
 		std::cout << "> ";
 		std::getline(std::cin, cmd);
 		if (cmd == "ADD") {
 			if (pb_size == 8) {
-				std::cout << "ERROR: Phonebook is full.\n";
+				std::cout << "ERROR: Phonebook is full." << std::endl;
 			}
 			else {
 				pb[pb_size] = create_contact_from_input();
@@ -35,6 +37,7 @@ int		main(void)
 			search_phone_book(pb, pb_size);
 		}
 	}
+	while (cmd != "EXIT");
 	return (0);
 }
 
@@ -43,7 +46,7 @@ void	search_phone_book(Contact* pb, int pb_size)
 	std::string index;
 
 	if (pb_size == 0) {
-		std::cout << "Empty Phonebook.\n";
+		std::cout << "Empty Phonebook." << std::endl;
 		return ;
 	}
 	display_all_contacts(pb, pb_size);
@@ -53,12 +56,12 @@ void	search_phone_book(Contact* pb, int pb_size)
 		std::stoi(index);
 	}
 	catch (const std::exception& e) {
-		std::cout << "nice try !\n";
+		std::cout << "nice try !" << std::endl;
 		return ;
 	}
 	if (index.find_first_not_of("0123456789", 0) != std::string::npos
 			|| std::stoi(index) > pb_size - 1 || std::stoi(index) < 0) {
-		std::cout << "nice try !\n";
+		std::cout << "nice try !" << std::endl;
 		return ;
 	}
 	pb[std::stoi(index)].str();

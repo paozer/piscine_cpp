@@ -22,13 +22,12 @@ class Pony {
 		int			_age;
 		int			_height;
 
-
 	public:
 		Pony(std::string name, std::string color, int age, int height);
-		~Pony(void);
+		~Pony();
+		std::string	repr();
 		static void ponyOnTheStack(std::string name, std::string color, int age, int height);
 		static void ponyOnTheHeap(std::string name, std::string color, int age, int height);
-		std::string	repr(void);
 };
 
 #endif

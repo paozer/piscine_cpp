@@ -12,7 +12,7 @@
 
 #include "Logger.hpp"
 
-std::string	getTimestamp(void);
+std::string	getTimestamp();
 
 Logger::Logger(std::string log_file) : _log_file(log_file) {}
 

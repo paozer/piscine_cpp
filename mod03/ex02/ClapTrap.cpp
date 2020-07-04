@@ -38,7 +38,18 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
 	std::cout << "Assignment ClapTrap Operator" << std::endl;
-	(void)other;
+	if (this != &other) {
+		_hit_points = other._hit_points;
+		_max_hit_points = other._max_hit_points;
+		_energy_points = other._energy_points;
+		_max_energy_points = other._max_energy_points;
+		_level = other._level;
+		_name = other._name;
+		_model = other._model;
+		_melee_attack_damage = other._melee_attack_damage;
+		_ranged_attack_damage = other._ranged_attack_damage;
+		_armor_damage_reduction = other._armor_damage_reduction;
+	}
 	return (*this);
 }
 

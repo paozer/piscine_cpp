@@ -14,26 +14,25 @@
 
 Pony::Pony(std::string name, std::string color, int age, int height)
 	: _name(name), _color(color), _age(age), _height(height)
-{
-	std::cout << "Object created.\n";
-}
+{ std::cout << "Object created." << std::endl; }
 
-Pony::~Pony(void) { std::cout << "Object destroyed.\n"; }
+Pony::~Pony() { std::cout << "Object destroyed." << std::endl; }
 
-void	Pony::ponyOnTheStack(std::string name, std::string color, int age, int height)
+/* MEMBER FUNCTIONS */
+void Pony::ponyOnTheStack(std::string name, std::string color, int age, int height)
 {
 	Pony my_pony (name, color, age, height);
 	std::cout << my_pony.repr() << std::endl;
 }
 
-void	Pony::ponyOnTheHeap(std::string name, std::string color, int age, int height)
+void Pony::ponyOnTheHeap(std::string name, std::string color, int age, int height)
 {
 	Pony* my_pony = new Pony (name, color, age, height);
 	std::cout << my_pony->repr() << std::endl;
 	delete my_pony;
 }
 
-std::string Pony::repr(void)
+std::string Pony::repr()
 {
 	std::string repr;
 

@@ -13,19 +13,13 @@
 #include "Human.hpp"
 
 void Human::meleeAttack(std::string const& target)
-{
-	std::cout << "Melee attack on " << target << std::endl;
-}
+{ std::cout << "Melee attack on " << target << std::endl; }
 
 void Human::rangedAttack(std::string const& target)
-{
-	std::cout << "Ranged attack on " << target << std::endl;
-}
+{ std::cout << "Ranged attack on " << target << std::endl; }
 
 void Human::intimidatingShout(std::string const& target)
-{
-	std::cout << "Intimidating shout towards " << target << std::endl;
-}
+{ std::cout << "Intimidating shout towards " << target << std::endl; }
 
 void Human::action(std::string const& action_name, std::string const& target)
 {

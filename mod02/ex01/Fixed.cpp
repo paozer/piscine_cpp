@@ -30,13 +30,13 @@ Fixed& Fixed::operator=(const Fixed& other)
 	return (*this);
 }
 
-int Fixed::getRawBits(void) const { return (fixed_point_value); }
+int Fixed::getRawBits() const { return (fixed_point_value); }
 
 void Fixed::setRawBits(int const raw) { fixed_point_value = raw;}
 
-int Fixed::toInt(void) const { return (roundf(this->getRawBits() >> binary_point)); }
+int Fixed::toInt() const { return (roundf(this->getRawBits() >> binary_point)); }
 
 // undoes int constructor result
-float Fixed::toFloat(void) const { return ((float)this->getRawBits() / (float)(1 << binary_point)); }
+float Fixed::toFloat() const { return ((float)this->getRawBits() / (float)(1 << binary_point)); }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f) { return (os << f.toFloat()); }

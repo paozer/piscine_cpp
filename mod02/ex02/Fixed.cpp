@@ -96,11 +96,11 @@ std::ostream& operator<<(std::ostream& os, const Fixed& f) { return (os << f.toF
 
 /* MEMBER FUNCTIONS */
 
-int Fixed::getRawBits(void) const { return (this->fixed_point_value); }
+int Fixed::getRawBits() const { return (this->fixed_point_value); }
 void Fixed::setRawBits(int const raw) { this->fixed_point_value = raw;}
 
-int Fixed::toInt(void) const { return (roundf(this->getRawBits() >> binary_point)); }
-float Fixed::toFloat(void) const
+int Fixed::toInt() const { return (roundf(this->getRawBits() >> binary_point)); }
+float Fixed::toFloat() const
 { return ((float)this->getRawBits() / (float)(1 << binary_point)); }
 
 /* STATIC FUNCTIONS */

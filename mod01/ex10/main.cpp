@@ -26,7 +26,7 @@ int main(int ac, char *av[])
 		for (int i = 1; av[i] != nullptr; ++i) {
 			std::ifstream file (av[i], std::ifstream::in);
 			if (file.fail()) {
-				std::cerr << "cato9tails: "<< av[i] << ": No such file or directory\n";
+				std::cerr << "cato9tails: "<< av[i] << ": No such file or directory" << std::endl;
 				continue ;
 			}
 			while (std::getline(file, output))

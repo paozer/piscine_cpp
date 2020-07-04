@@ -44,7 +44,8 @@ void NinjaTrap::ninjaShoebox(FragTrap& ft)
 
 void NinjaTrap::ninjaShoebox(NinjaTrap& nt)
 {
-	std::cout << "Knowing the ins and outs of the NINJ4-TP named " << nt.getName() << " the " << _model << " called " << _name << " inflicts " << 9000 << " damage on the target." << std::endl;
+	(void)nt;
+	std::cout << "Knowing the ins and outs of NINJ4-TP's " << _name << " inflicts " << 9000 << " damage on the target." << std::endl;
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap& st)

@@ -22,7 +22,7 @@
 void	search_phone_book(Contact* pb, int pb_size);
 
 /* Utils */
-Contact create_contact_from_input(void);
+Contact create_contact_from_input();
 void	display_all_contacts(Contact pb[], int &pb_size);
 void 	print_f(std::string str);
 

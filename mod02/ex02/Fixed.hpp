@@ -45,10 +45,10 @@ class Fixed
 		Fixed& operator--(); // pre-decrement
 
 		/* MEMBER FUNCTIONS */
-		int getRawBits(void) const;
+		int getRawBits() const;
 		void setRawBits(int const raw);
-		int toInt(void) const;
-		float toFloat(void) const;
+		int toInt() const;
+		float toFloat() const;
 
 		static Fixed& max(Fixed& a, Fixed& b);
 		static Fixed& min(Fixed& a, Fixed& b);

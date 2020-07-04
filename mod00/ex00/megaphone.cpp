@@ -15,7 +15,7 @@
 int		main(int ac, char *av[])
 {
 	if (ac == 1) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	}
 	else {
 		for (int i = 1; av[i] != nullptr; ++i) {
@@ -24,7 +24,7 @@ int		main(int ac, char *av[])
 			}
 			std::cout << av[i];
 		}
-		std::cout << '\n';
+		std::cout << std::endl;
 	}
 	return (0);
 }

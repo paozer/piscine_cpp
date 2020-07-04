@@ -37,15 +37,17 @@ FragTrap::FragTrap(const FragTrap& other)
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
 	std::cout << "Assignment Operator called" << std::endl;
-	_hit_points = other._hit_points;
-	_max_hit_points = other._max_hit_points;
-	_energy_points = other._energy_points;
-	_max_energy_points = other._max_energy_points;
-	_level = other._level;
-	_name = other._name;
-	_melee_attack_damage = other._melee_attack_damage;
-	_ranged_attack_damage = other._ranged_attack_damage;
-	_armor_damage_reduction = other._armor_damage_reduction;
+	if (this != &other) {
+		_hit_points = other._hit_points;
+		_max_hit_points = other._max_hit_points;
+		_energy_points = other._energy_points;
+		_max_energy_points = other._max_energy_points;
+		_level = other._level;
+		_name = other._name;
+		_melee_attack_damage = other._melee_attack_damage;
+		_ranged_attack_damage = other._ranged_attack_damage;
+		_armor_damage_reduction = other._armor_damage_reduction;
+	}
 	return (*this);
 }
 

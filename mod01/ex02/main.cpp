@@ -18,7 +18,7 @@ int main(void)
 	ZombieEvent ze;
 
 	std::srand(time(nullptr));
-	std::cout << "Type is [really angry]\n";
+	std::cout << "Type is [really angry]" << std::endl;
 	ze.setZombieType("really angry");
 	ze.randomChump();
 	Zombie* z0 = ze.newZombie("z0");
@@ -26,13 +26,13 @@ int main(void)
 	z0->announce();
 	z1->announce();
 
-	std::cout << "\nType is [not so angry]\n";
+	std::cout << std::endl << "Type is [not so angry]" << std::endl;
 	ze.setZombieType("not so angry");
 	ze.randomChump();
 	Zombie* z2 = ze.newZombie("z2");
 	z2->announce();
 
-	std::cout << "\nType is [friendly]\n";
+	std::cout << std::endl << "Type is [friendly]" << std::endl;
 	ze.setZombieType("friendly");
 	Zombie* z3 = ze.newZombie("z3");
 	z0->announce();

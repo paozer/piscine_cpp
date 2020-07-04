@@ -50,7 +50,7 @@ int main(void) {
 	std::cout << "Fixed::max(" << a << ", " << d << ") = " << Fixed::max(a, d) << std::endl;
 	std::cout << "Fixed::min(" << a << ", " << d << ") = " << Fixed::min(a, d) << std::endl;
 
-	std::cout << std::endl << "subjects main\n";
+	std::cout << std::endl << "subjects main" << std::endl;
 	Fixed e;
 	Fixed f( Fixed( 5.05f ) * Fixed( 2 ) );
 	std::cout << e << std::endl;

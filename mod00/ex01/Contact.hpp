@@ -32,11 +32,11 @@ class Contact {
 
 	public:
 		Contact();
-		Contact(std::string info[]);
-		void str(void);
-		std::string get_first_name(void);
-		std::string get_last_name(void);
-		std::string get_login(void);
+		Contact(std::string info[11]);
+		void str();
+		std::string get_first_name();
+		std::string get_last_name();
+		std::string get_login();
 };
 
 #endif
