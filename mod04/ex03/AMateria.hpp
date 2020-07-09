@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/09 22:28:42 by pramella          #+#    #+#             */
+/*   Updated: 2020/07/09 22:28:42 by pramella         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
 # include <iostream>
 
-class ICharacter; // forward declaration
+class ICharacter;
 
 class AMateria
 {
@@ -17,10 +29,8 @@ class AMateria
 
 		std::string const& getType() const;
 		unsigned int getXP() const;
-
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
-		void updateXp();
 
 	private:
 		unsigned int _xp;

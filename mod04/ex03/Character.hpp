@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/09 22:28:47 by pramella          #+#    #+#             */
+/*   Updated: 2020/07/09 22:28:48 by pramella         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
@@ -20,12 +32,12 @@ class Character: public ICharacter
 		virtual void unequip(int idx);
 		virtual void use(int idx, ICharacter& target);
 
-		int getIsize() { return (_inventory_size); }
-
 	private:
 		std::string _name;
 		int _inventory_size;
 		AMateria** _inventory;
+
+		void deleteInventory();
 };
 
 #endif
