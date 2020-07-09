@@ -12,15 +12,12 @@
 
 #include "SuperMutant.hpp"
 
-SuperMutant::SuperMutant() :
-	Enemy(170, "Super Mutant")
+SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
 { std::cout << "Gaaah. Me want smash heads!" << std::endl; }
 
-SuperMutant::~SuperMutant()
-{ std::cout << "Aaargh..." << std::endl; }
+SuperMutant::~SuperMutant() { std::cout << "Aaargh..." << std::endl; }
 
-SuperMutant::SuperMutant(const SuperMutant& other) :
-	Enemy(170, "Super Mutant")
+SuperMutant::SuperMutant(const SuperMutant& other) : Enemy(170, "Super Mutant")
 { *this = other; }
 
 SuperMutant& SuperMutant::operator=(const SuperMutant& other)
@@ -29,5 +26,4 @@ SuperMutant& SuperMutant::operator=(const SuperMutant& other)
 	return (*this);
 }
 
-void SuperMutant::takeDamage(int amount)
-{ Enemy::takeDamage(amount - 3); }
+void SuperMutant::takeDamage(int amount) { Enemy::takeDamage(amount - 3); }

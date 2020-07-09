@@ -29,8 +29,6 @@ class TacticalMarine: public ISpaceMarine
 		virtual void battleCry() const;
 		virtual void rangedAttack() const;
 		virtual void meleeAttack() const;
-
-	private:
 };
 
 #endif

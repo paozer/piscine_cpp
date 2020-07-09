@@ -12,9 +12,7 @@
 
 #include "PlasmaRifle.hpp"
 
-PlasmaRifle::PlasmaRifle() :
-	AWeapon("Plasma Rifle", 5, 21)
-{}
+PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21) {}
 
 PlasmaRifle::PlasmaRifle(const PlasmaRifle& other) :
 	AWeapon("Plasma Rifle", 5, 21)

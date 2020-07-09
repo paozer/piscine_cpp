@@ -15,8 +15,7 @@
 Character::Character() {}
 
 Character::Character(std::string const& name) :
-	_name(name), _ap(40), _current_weapon(nullptr)
-{}
+	_name(name), _ap(40), _current_weapon(nullptr) {}
 
 Character::~Character() {}
 
@@ -34,19 +33,16 @@ Character& Character::operator=(const Character& other)
 
 void Character::recoverAP()
 {
-	if (_ap + 10 > 40) {
+	if (_ap + 10 > 40)
 		_ap = 40;
-	}
-	else {
+	else
 		_ap += 10;
-	}
 }
 
 void Character::attack(Enemy* enemy)
 {
-	if (_current_weapon == nullptr || _ap - _current_weapon->getAPCost() < 0) {
+	if (_current_weapon == nullptr || _ap - _current_weapon->getAPCost() < 0)
 		return ;
-	}
 	_ap -= _current_weapon->getAPCost();
 	std::cout << _name << " attacks " << enemy->getType() << " with a " << _current_weapon->getName() << std::endl;
 	_current_weapon->attack();
@@ -54,30 +50,26 @@ void Character::attack(Enemy* enemy)
 	// could have made this more robust by using reference to pointer instead of pointer
 	// and setting deleted pointer to nullptr
 	// subject demands function signature so yeah...
-	if (enemy->getHP() <= 0) {
+	if (enemy->getHP() <= 0)
 		delete enemy;
-	}
 }
 
 void Character::equip(AWeapon* weapon) { _current_weapon = weapon; }
 
 std::ostream& operator<<(std::ostream& os, Character& c)
 {
-	if (c.isArmed()) {
+	if (c.isArmed())
 		os << c.getName() << " has " << c.getAP() << " AP and wields a " << c.getWeaponName() << std::endl;
-	}
-	else {
+	else
 		os << c.getName() << " has " << c.getAP() << " AP and is unarmed" << std::endl;
-	}
 	return (os);
 }
 
 std::string Character::getName() const { return (_name); }
 std::string Character::getWeaponName() const
 {
-	if (isArmed()) {
+	if (isArmed())
 		return (_current_weapon->getName());
-	}
 	return ("(no weapon equipped)");
 }
 int Character::getAP() const { return (_ap); }

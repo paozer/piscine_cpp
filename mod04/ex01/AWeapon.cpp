@@ -15,8 +15,7 @@
 AWeapon::AWeapon() {}
 
 AWeapon::AWeapon(const std::string& name, int apcost, int damage) :
-	_name(name), _damage(damage), _ap_cost(apcost)
-{}
+	_name(name), _damage(damage), _ap_cost(apcost) {}
 
 AWeapon::~AWeapon() {}
 

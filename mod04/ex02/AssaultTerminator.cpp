@@ -24,11 +24,7 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator& other)
 AssaultTerminator& AssaultTerminator::operator=(const AssaultTerminator& other)
 { (void) other; return (*this); }
 
-ISpaceMarine* AssaultTerminator::clone() const
-{
-	ISpaceMarine* clone = new AssaultTerminator();
-	return (clone);
-}
+ISpaceMarine* AssaultTerminator::clone() const { return (new AssaultTerminator()); }
 
 void AssaultTerminator::battleCry() const { std::cout << "This code is unclean. PURIFY IT!" << std::endl; }
 void AssaultTerminator::rangedAttack() const { std::cout << "* does nothing *" << std::endl; }
