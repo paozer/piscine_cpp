@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AssaultTerminator.cpp                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/09 22:27:59 by pramella          #+#    #+#             */
+/*   Updated: 2020/07/09 22:28:00 by pramella         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AssaultTerminator.hpp"
 
 AssaultTerminator::AssaultTerminator()
