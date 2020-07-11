@@ -1,11 +1,12 @@
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form() : _name("default_ctor"), _req_signing_grade(0), _req_execution_grade(0) {}
 
 Form::~Form() {}
 
 Form::Form(const std::string& name, const int& req_signing_grade, const int& req_execution_grade)
-	: _name(name), _req_signing_grade(req_signing_grade), _req_execution_grade(req_execution_grade)
+	: _name(name), _is_signed(false), _req_signing_grade(req_signing_grade), _req_execution_grade(req_execution_grade)
 {
 	if (_req_signing_grade < 1 || _req_execution_grade < 1)
 		throw Form::GradeTooHighException();
@@ -20,23 +21,19 @@ Form::Form(const Form& other)
 
 Form& Form::operator=(const Form& other)
 {
-	if (this != &other) {
+	if (this != &other)
 		_is_signed = other._is_signed;
-	}
 	return (*this);
 }
 
 /* MEMBER FUNCTIONS */
 void Form::execute(Bureaucrat const& executor) const
 {
-	if (!_is_signed) {
-		//std::cerr << "[ERROR] Form is not signed" << std::endl;
+	if (!_is_signed)
 		return ;
-	}
-	if (executor.getGrade() > _req_execution_grade) {
-		//std::cerr << "[ERROR] Bureaucrat is not authorized to execute" << std::endl;
+	if (executor.getGrade() > _req_execution_grade)
 		throw Form::GradeTooLowException();
-	}
+	action();
 }
 
 void Form::beSigned(const Bureaucrat& b)
@@ -48,6 +45,10 @@ void Form::beSigned(const Bureaucrat& b)
 
 void Form::signForm(const Bureaucrat& b)
 {
+	if (_is_signed) {
+		std::cout << _name << " is already signed" << std::endl;
+		return ;
+	}
 	try {
 		beSigned(b);
 		std::cout << b.getName() << " signs " << _name << std::endl;

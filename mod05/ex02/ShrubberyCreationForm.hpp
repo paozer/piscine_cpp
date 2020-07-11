@@ -13,12 +13,10 @@ class ShrubberyCreationForm: public Form
 		ShrubberyCreationForm(const ShrubberyCreationForm&);
 		~ShrubberyCreationForm();
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm&);
-
-		void action() const;
+		virtual void action() const;
 
 	private:
 		std::string _target;
 };
 
 #endif
-

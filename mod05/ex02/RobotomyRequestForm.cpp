@@ -1,30 +1,26 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : Form("robotomyRequest", 72, 45), _target() {}
-
-RobotomyRequestForm::RobotomyRequestForm(const std::string& target) : Form("robotomyRequest", 72, 45), _target(target) {}
-
-RobotomyRequestForm::~RobotomyRequestForm() {}
+RobotomyRequestForm::RobotomyRequestForm(const std::string& target) :
+	Form("robotomyRequest", 72, 45), _target(target), _first_execution(true) {}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
-	: RobotomyRequestForm()
-{ *this = other; }
+	: Form("robotomyRequest", 72, 45), _target(other._target) {}
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
 {
-	if (this != &other) {
+	if (this != &other)
 		_target = other._target;
-	}
 	return (*this);
 }
 
+RobotomyRequestForm::~RobotomyRequestForm() {}
+
 void RobotomyRequestForm::action() const
 {
-	static bool first_fct_call = true;
 
-	if (first_fct_call) {
+	if (_first_execution) {
+		_first_execution = false;
 		std::cout << "* bruits de perceuse * " << _target << " was successfully robotomized." << std::endl;
-		first_fct_call = false;
 	}
 	else
 		std::cout << "robotomizing " << _target << " failed..." << std::endl;

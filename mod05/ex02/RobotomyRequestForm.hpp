@@ -13,12 +13,11 @@ class RobotomyRequestForm: public Form
 		RobotomyRequestForm(const RobotomyRequestForm&);
 		~RobotomyRequestForm();
 		RobotomyRequestForm &operator=(const RobotomyRequestForm&);
-
-		void action() const;
+		virtual void action() const;
 
 	private:
 		std::string _target;
+		mutable bool _first_execution;
 };
 
 #endif
-

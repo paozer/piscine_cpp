@@ -3,20 +3,21 @@
 # define FORM_HPP
 
 # include <iostream>
-# include "Bureaucrat.hpp"
 
-// has to be abstract class
+class Bureaucrat;
+
 class Form
 {
 	public:
 		Form(const Form&);
 		Form(const std::string& name, const int& req_signing_grade, const int& req_execution_grade);
-		~Form();
+		virtual ~Form();
 		Form &operator=(const Form&);
 
 		void beSigned(const Bureaucrat&);
 		void signForm(const Bureaucrat&);
 		void execute(Bureaucrat const& executor) const;
+		virtual void action() const = 0;
 
 		const std::string& getName() const;
 		const int& getReqSigningGrade() const;
