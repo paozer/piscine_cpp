@@ -12,15 +12,14 @@ class Bureaucrat
 	public:
 		Bureaucrat(const std::string& name, int grade);
 		Bureaucrat(const Bureaucrat&);
-		~Bureaucrat();
 		Bureaucrat& operator=(const Bureaucrat&);
-
-		Bureaucrat& operator++();
-		Bureaucrat& operator--();
+		~Bureaucrat();
 
 		void executeForm(const Form& form);
 		std::string getName() const;
 		int getGrade() const;
+		Bureaucrat& operator++();
+		Bureaucrat& operator--();
 
 		struct GradeToLow: public std::exception {};
 		struct GradeToHigh: public std::exception {};
@@ -31,6 +30,6 @@ class Bureaucrat
 		int _grade;
 };
 
-std::ostream& operator<<(std::ostream& os, Bureaucrat& b);
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
 
 #endif

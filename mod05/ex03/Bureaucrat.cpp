@@ -2,16 +2,16 @@
 #include "Form.hpp"
 
 /* CONSTRUCTION DESTRUCTION COPY */
-Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name)
-{
-	if (grade < 1)
-		throw Bureaucrat::GradeToHigh();
-	if (grade > 150)
-		throw Bureaucrat::GradeToLow();
-	_grade = grade;
-}
+Bureaucrat::Bureaucrat() {}
 
-Bureaucrat::~Bureaucrat() {}
+Bureaucrat::Bureaucrat(const std::string& name, int grade) :
+	_name(name), _grade(grade)
+{
+	if (_grade < 1)
+		throw Bureaucrat::GradeToHigh();
+	if (_grade > 150)
+		throw Bureaucrat::GradeToLow();
+}
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) :
 	_name(other._name), _grade(other._grade) {}
@@ -22,6 +22,8 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 		_grade = other._grade;
 	return (*this);
 }
+
+Bureaucrat::~Bureaucrat() {}
 
 /* MEMBER FUNCTIONS */
 void Bureaucrat::executeForm(const Form& form)
@@ -43,7 +45,7 @@ std::string Bureaucrat::getName() const { return (_name); }
 
 int Bureaucrat::getGrade() const { return (_grade); }
 
-std::ostream& operator<<(std::ostream& os, Bureaucrat& b)
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 { return (os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl); }
 
 Bureaucrat& Bureaucrat::operator++()

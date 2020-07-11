@@ -11,8 +11,8 @@ class Intern
 	public:
 		Intern();
 		Intern(const Intern&);
-		~Intern();
 		Intern &operator=(const Intern&);
+		~Intern();
 
 		Form* makeForm(const std::string& type, const std::string& target);
 		Form* createRobotomyRequest(const std::string& target);
