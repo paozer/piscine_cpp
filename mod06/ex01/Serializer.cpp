@@ -2,10 +2,10 @@
 
 void* serialize()
 {
-    void * ret = operator new (2 * STRING_SIZE + sizeof(int));
-    fillArrayRandAlnum(static_cast<char*>(ret), STRING_SIZE);
-    fillArrayRandAlnum(static_cast<char*>(ret) + STRING_SIZE + sizeof(int), STRING_SIZE);
-    *(reinterpret_cast<int*>(static_cast<char*>(ret) + STRING_SIZE)) = rand();
+    char * ret = new char[2 * STRING_SIZE + sizeof(int)];
+    fillArrayRandAlnum(ret, STRING_SIZE);
+    fillArrayRandAlnum(ret + STRING_SIZE + sizeof(int), STRING_SIZE);
+    *(reinterpret_cast<int*>(ret + STRING_SIZE)) = rand();
     return (ret);
 }
 

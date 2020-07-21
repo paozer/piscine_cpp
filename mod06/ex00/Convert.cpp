@@ -24,7 +24,7 @@ Convert& Convert::operator=(const Convert & other)
 void Convert::toChar() const
 {
     std::cout << "char: ";
-    if (_conversion < 0 || 127 < _conversion || _conversion_error_flag)
+    if (_conversion < CHAR_MIN || CHAR_MAX < _conversion || _conversion_error_flag)
         std::cout << "impossible" << std::endl;
     else if (!std::isprint(_conversion))
         std::cout << "Non displayable" << std::endl;

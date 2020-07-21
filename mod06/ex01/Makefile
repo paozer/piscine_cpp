@@ -7,7 +7,7 @@ NAME	= serializer
 
 CC		= clang++
 
-CFLAGS	= -g3 -fsanitize=address -Wall -Werror -Wextra -Wno-conversion
+CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 

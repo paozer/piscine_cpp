@@ -6,7 +6,7 @@ NAME	= identify
 
 CC		= clang++
 
-CFLAGS	= -Wall -Werror -Wextra -Wno-conversion
+CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 
