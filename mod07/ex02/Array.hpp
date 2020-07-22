@@ -11,11 +11,8 @@ class Array
     public:
         Array(unsigned int size = 0) :
             _size(size),
-            _data(_size ? new T[_size] : nullptr)
-        {
-            for (unsigned int i(0); i < _size; ++i)
-                _data[i] = 0;
-        }
+            _data(new T[_size]())
+        {}
 
         ~Array() { delete[] _data; };
         Array(const Array & other) : _data(nullptr) { *this = other; }
@@ -25,7 +22,7 @@ class Array
             if (this != &other) {
                 delete[] _data;
                 _size = other._size;
-                _data = new T[_size];
+                _data = new T[_size]();
                 for (unsigned int i(0); i < _size; ++i)
                     _data[i] = other._data[i];
             }

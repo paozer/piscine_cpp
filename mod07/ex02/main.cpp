@@ -58,7 +58,7 @@ int main()
         std::cout << std::endl;
     }
     {
-        std::cout << "ASSIGNATION OPERATOR TESTS" << std::endl;
+        std::cout << "COPY CONSTRUCTOR/ASSIGNATION OPERATOR TESTS" << std::endl;
         Array<char> s0 (10);
 
         std::cout << "s0 size = " << s0.size() << std::endl;
