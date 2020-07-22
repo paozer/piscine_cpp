@@ -21,8 +21,8 @@ PowerFist::~PowerFist() {}
 
 PowerFist& PowerFist::operator=(const PowerFist& other)
 {
-	AWeapon::operator=(other);
-	return (*this);
+    AWeapon::operator=(other);
+    return (*this);
 }
 
 void PowerFist::attack() const { std::cout << "* pschhh... SBAM! *" << std::endl; }

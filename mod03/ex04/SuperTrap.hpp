@@ -20,15 +20,15 @@
 
 class SuperTrap : public FragTrap, public NinjaTrap
 {
-	public:
-		SuperTrap();
-		SuperTrap(const std::string& name);
-		SuperTrap(const SuperTrap&);
-		~SuperTrap();
-		SuperTrap &operator=(const SuperTrap&);
+    public:
+        SuperTrap();
+        SuperTrap(const std::string& name);
+        SuperTrap(const SuperTrap&);
+        ~SuperTrap();
+        SuperTrap &operator=(const SuperTrap&);
 
-		void rangedAttack(const std::string& target);
-		void meleeAttack(const std::string& target);
+        void rangedAttack(const std::string& target);
+        void meleeAttack(const std::string& target);
 };
 
 #endif

@@ -20,14 +20,14 @@
 
 class Cure: public AMateria
 {
-	public:
-		Cure();
-		Cure(const Cure&);
-		~Cure();
-		Cure &operator=(const Cure&);
+    public:
+        Cure();
+        Cure(const Cure&);
+        ~Cure();
+        Cure &operator=(const Cure&);
 
-		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+        virtual AMateria* clone() const;
+        virtual void use(ICharacter& target);
 };
 
 #endif

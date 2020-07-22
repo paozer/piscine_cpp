@@ -23,9 +23,9 @@ AMateria::AMateria(const AMateria& other) { *this = other; }
 
 AMateria& AMateria::operator=(const AMateria& other)
 {
-	if (this != &other)
-		_xp = other._xp;
-	return (*this);
+    if (this != &other)
+        _xp = other._xp;
+    return (*this);
 }
 
 /* MEMBER FUNCTIONS */
@@ -35,6 +35,6 @@ unsigned int AMateria::getXP() const { return(_xp); }
 
 void AMateria::use(ICharacter& target)
 {
-	(void) target;
-	_xp += 10;
+    (void) target;
+    _xp += 10;
 }

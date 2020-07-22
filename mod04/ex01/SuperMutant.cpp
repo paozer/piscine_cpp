@@ -22,8 +22,8 @@ SuperMutant::SuperMutant(const SuperMutant& other) : Enemy(170, "Super Mutant")
 
 SuperMutant& SuperMutant::operator=(const SuperMutant& other)
 {
-	Enemy::operator=(other);
-	return (*this);
+    Enemy::operator=(other);
+    return (*this);
 }
 
 void SuperMutant::takeDamage(int amount) { Enemy::takeDamage(amount - 3); }

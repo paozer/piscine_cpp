@@ -23,31 +23,31 @@ FragTrap::~FragTrap() { std::cout << "Default FragTrap Destructor" << std::endl;
 
 FragTrap::FragTrap(const FragTrap& other)
 {
-	std::cout << "Copy FragTrap Constructor" << std::endl;
-	*this = other;
+    std::cout << "Copy FragTrap Constructor" << std::endl;
+    *this = other;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-	std::cout << "Assignment FragTrap Operator" << std::endl;
-	ClapTrap::operator=(other);
-	return (*this);
+    std::cout << "Assignment FragTrap Operator" << std::endl;
+    ClapTrap::operator=(other);
+    return (*this);
 }
 
 /* MEMBER FUNCTIONS */
 void FragTrap::vaulthunter_dot_exe(std::string const& target)
 {
-	int i;
-	int random_damage;
-	std::string attack[5] = {"potato", "love", "ninja", "beer", "hacker"};
+    int i;
+    int random_damage;
+    std::string attack[5] = {"potato", "love", "ninja", "beer", "hacker"};
 
-	if (_energy_points < 25) {
-		std::cout << "There is not enough energy left for the vaulthunter_dot_exe attack." << std::endl;
-	}
-	else {
-		_energy_points -= 25;
-		i = rand() % 5;
-		random_damage = rand() % 100;
-		std::cout << "FR4G-TP " << _name << " executes a " << attack[i] << " attack on " << target << " causing " << random_damage << " points of damage" << std::endl;
-	}
+    if (_energy_points < 25) {
+        std::cout << "There is not enough energy left for the vaulthunter_dot_exe attack." << std::endl;
+    }
+    else {
+        _energy_points -= 25;
+        i = rand() % 5;
+        random_damage = rand() % 100;
+        std::cout << "FR4G-TP " << _name << " executes a " << attack[i] << " attack on " << target << " causing " << random_damage << " points of damage" << std::endl;
+    }
 }

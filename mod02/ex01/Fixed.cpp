@@ -26,8 +26,8 @@ Fixed::~Fixed() {}
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-	this->setRawBits(other.getRawBits());
-	return (*this);
+    this->setRawBits(other.getRawBits());
+    return (*this);
 }
 
 int Fixed::getRawBits() const { return (fixed_point_value); }

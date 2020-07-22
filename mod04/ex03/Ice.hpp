@@ -20,14 +20,14 @@
 
 class Ice: public AMateria
 {
-	public:
-		Ice();
-		Ice(const Ice&);
-		~Ice();
-		Ice &operator=(const Ice&);
+    public:
+        Ice();
+        Ice(const Ice&);
+        ~Ice();
+        Ice &operator=(const Ice&);
 
-		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+        virtual AMateria* clone() const;
+        virtual void use(ICharacter& target);
 };
 
 #endif

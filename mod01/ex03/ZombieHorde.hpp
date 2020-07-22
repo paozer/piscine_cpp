@@ -18,15 +18,14 @@
 
 class ZombieHorde
 {
-	private:
-		Zombie* zb;
-		int		len;
+    public:
+        ZombieHorde(int n);
+        ~ZombieHorde();
+        void announce();
 
-
-	public:
-		ZombieHorde(int n);
-		~ZombieHorde();
-		void announce();
+    private:
+        Zombie* zb;
+        int     len;
 };
 
 #endif

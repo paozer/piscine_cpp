@@ -18,11 +18,11 @@
 class Human
 {
    public:
-	  const Brain& getBrain();
-	  std::string identity();
+      const Brain& getBrain();
+      std::string identity();
 
    private:
-	  const Brain _brain;
+      const Brain _brain;
 };
 
 #endif

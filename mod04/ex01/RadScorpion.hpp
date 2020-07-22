@@ -19,11 +19,11 @@
 
 class RadScorpion: public Enemy
 {
-	public:
-		RadScorpion();
-		RadScorpion(const RadScorpion&);
-		~RadScorpion();
-		RadScorpion &operator=(const RadScorpion&);
+    public:
+        RadScorpion();
+        RadScorpion(const RadScorpion&);
+        ~RadScorpion();
+        RadScorpion &operator=(const RadScorpion&);
 };
 
 #endif

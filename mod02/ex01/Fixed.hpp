@@ -19,22 +19,22 @@
 
 class Fixed
 {
-	public:
-		Fixed();
-		Fixed(const int nb);
-		Fixed(const float nb);
-		~Fixed();
-		Fixed(const Fixed& other);
-		Fixed& operator=(const Fixed& other);
+    public:
+        Fixed();
+        Fixed(const int nb);
+        Fixed(const float nb);
+        ~Fixed();
+        Fixed(const Fixed& other);
+        Fixed& operator=(const Fixed& other);
 
-		int getRawBits() const;
-		void setRawBits(int const raw);
-		int toInt() const;
-		float toFloat() const;
+        int getRawBits() const;
+        void setRawBits(int const raw);
+        int toInt() const;
+        float toFloat() const;
 
-	private:
-		int fixed_point_value;
-		static const int binary_point;
+    private:
+        int fixed_point_value;
+        static const int binary_point;
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f);

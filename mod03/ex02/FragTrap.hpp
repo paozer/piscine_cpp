@@ -20,14 +20,14 @@
 
 class FragTrap: public ClapTrap
 {
-	public:
-		FragTrap();
-		FragTrap(const std::string& name);
-		FragTrap(const FragTrap&);
-		~FragTrap();
-		FragTrap& operator=(const FragTrap&);
+    public:
+        FragTrap();
+        FragTrap(const std::string& name);
+        FragTrap(const FragTrap&);
+        ~FragTrap();
+        FragTrap& operator=(const FragTrap&);
 
-		void vaulthunter_dot_exe(std::string const& target);
+        void vaulthunter_dot_exe(std::string const& target);
 };
 
 #endif

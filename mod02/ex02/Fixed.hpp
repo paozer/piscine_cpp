@@ -19,43 +19,43 @@
 
 class Fixed
 {
-	public:
-		/* CONSTRUCTION & DESTRUCTION */
-		Fixed();
-		Fixed(const int nb);
-		Fixed(const float nb);
-		Fixed(const Fixed& other);
-		~Fixed();
+    public:
+        /* CONSTRUCTION & DESTRUCTION */
+        Fixed();
+        Fixed(const int nb);
+        Fixed(const float nb);
+        Fixed(const Fixed& other);
+        ~Fixed();
 
-		/* OPERATOR OVERLOADS */
-		Fixed& operator=(const Fixed& other);
-		bool operator<(const Fixed& other) const;
-		bool operator>(const Fixed& other) const;
-		bool operator>=(const Fixed& other) const;
-		bool operator<=(const Fixed& other) const;
-		bool operator==(const Fixed& other) const;
-		bool operator!=(const Fixed& other) const;
-		Fixed operator+(const Fixed& other) const;
-		Fixed operator-(const Fixed& other) const;
-		Fixed operator*(const Fixed& other) const;
-		Fixed operator/(const Fixed& other) const;
-		Fixed operator++(int); // post-increment
-		Fixed operator--(int); // post-decrement
-		Fixed& operator++(); // pre-increment
-		Fixed& operator--(); // pre-decrement
+        /* OPERATOR OVERLOADS */
+        Fixed& operator=(const Fixed& other);
+        bool operator<(const Fixed& other) const;
+        bool operator>(const Fixed& other) const;
+        bool operator>=(const Fixed& other) const;
+        bool operator<=(const Fixed& other) const;
+        bool operator==(const Fixed& other) const;
+        bool operator!=(const Fixed& other) const;
+        Fixed operator+(const Fixed& other) const;
+        Fixed operator-(const Fixed& other) const;
+        Fixed operator*(const Fixed& other) const;
+        Fixed operator/(const Fixed& other) const;
+        Fixed operator++(int); // post-increment
+        Fixed operator--(int); // post-decrement
+        Fixed& operator++(); // pre-increment
+        Fixed& operator--(); // pre-decrement
 
-		/* MEMBER FUNCTIONS */
-		int getRawBits() const;
-		void setRawBits(int const raw);
-		int toInt() const;
-		float toFloat() const;
+        /* MEMBER FUNCTIONS */
+        int getRawBits() const;
+        void setRawBits(int const raw);
+        int toInt() const;
+        float toFloat() const;
 
-		static Fixed& max(Fixed& a, Fixed& b);
-		static Fixed& min(Fixed& a, Fixed& b);
+        static Fixed& max(Fixed& a, Fixed& b);
+        static Fixed& min(Fixed& a, Fixed& b);
 
-	private:
-		int fixed_point_value;
-		static const int binary_point;
+    private:
+        int fixed_point_value;
+        static const int binary_point;
 };
 
 /* NON-MEMBER FUNCTIONS */

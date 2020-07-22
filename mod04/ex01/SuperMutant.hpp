@@ -19,12 +19,12 @@
 
 class SuperMutant: public Enemy
 {
-	public:
-		SuperMutant();
-		SuperMutant(const SuperMutant&);
-		~SuperMutant();
-		SuperMutant &operator=(const SuperMutant&);
-		virtual void takeDamage(int);
+    public:
+        SuperMutant();
+        SuperMutant(const SuperMutant&);
+        ~SuperMutant();
+        SuperMutant &operator=(const SuperMutant&);
+        virtual void takeDamage(int);
 };
 
 #endif

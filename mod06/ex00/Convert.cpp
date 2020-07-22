@@ -24,7 +24,7 @@ Convert& Convert::operator=(const Convert & other)
 void Convert::toChar() const
 {
     std::cout << "char: ";
-    if (_conversion < CHAR_MIN || CHAR_MAX < _conversion || _conversion_error_flag)
+    if (_conversion < CHAR_MIN || CHAR_MAX < _conversion || _conversion_error_flag || std::isnan(_conversion))
         std::cout << "impossible" << std::endl;
     else if (!std::isprint(_conversion))
         std::cout << "Non displayable" << std::endl;
@@ -35,7 +35,7 @@ void Convert::toChar() const
 void Convert::toInt() const
 {
     std::cout << "int: ";
-    if (_conversion < INT_MIN || INT_MAX < _conversion || _conversion_error_flag)
+    if (_conversion < INT_MIN || INT_MAX < _conversion || _conversion_error_flag || std::isnan(_conversion))
         std::cout << "impossible" << std::endl;
     else
         std::cout << static_cast<int>(_conversion) << std::endl;

@@ -23,15 +23,15 @@ void Human::intimidatingShout(std::string const& target)
 
 void Human::action(std::string const& action_name, std::string const& target)
 {
-	std::string action[3] = {"meleeAttack", "rangedAttack", "intimidatingShout"};
-	// typedef memFuncPtr is pointer to Human member function which takes cons string
-	typedef void (Human::*memFuncPtr) (std::string const& target);
-	memFuncPtr mfp[] = { &Human::meleeAttack, &Human::rangedAttack, &Human::intimidatingShout };
+    std::string action[3] = {"meleeAttack", "rangedAttack", "intimidatingShout"};
+    // typedef memFuncPtr is pointer to Human member function which takes cons string
+    typedef void (Human::*memFuncPtr) (std::string const& target);
+    memFuncPtr mfp[] = { &Human::meleeAttack, &Human::rangedAttack, &Human::intimidatingShout };
 
-	for (int i = 0; i < 3; ++i) {
-		if (action_name == action[i]) {
-			(this->*mfp[i]) (target);
-			return ;
-		}
-	}
+    for (int i = 0; i < 3; ++i) {
+        if (action_name == action[i]) {
+            (this->*mfp[i]) (target);
+            return ;
+        }
+    }
 }

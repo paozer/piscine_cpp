@@ -7,17 +7,17 @@
 
 class RobotomyRequestForm: public Form
 {
-	public:
-		RobotomyRequestForm(const std::string& target);
-		RobotomyRequestForm(const RobotomyRequestForm&);
-		RobotomyRequestForm &operator=(const RobotomyRequestForm&);
-		~RobotomyRequestForm();
-		virtual void action() const;
+    public:
+        RobotomyRequestForm(const std::string& target);
+        RobotomyRequestForm(const RobotomyRequestForm&);
+        RobotomyRequestForm &operator=(const RobotomyRequestForm&);
+        ~RobotomyRequestForm();
+        virtual void action() const;
 
-	private:
-		RobotomyRequestForm();
-		std::string _target;
-		mutable bool _first_execution;
+    private:
+        RobotomyRequestForm();
+        std::string _target;
+        mutable bool _first_execution;
 };
 
 #endif

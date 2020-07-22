@@ -23,31 +23,31 @@ ScavTrap::~ScavTrap() { std::cout << "Default ScavTrap Destructor" << std::endl;
 
 ScavTrap::ScavTrap(const ScavTrap& other)
 {
-	std::cout << "Copy ScavTrap Constructor" << std::endl;
-	*this = other;
+    std::cout << "Copy ScavTrap Constructor" << std::endl;
+    *this = other;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
-	std::cout << "Assignment ScavTrap Operator" << std::endl;
-	ClapTrap::operator=(other);
-	return (*this);
+    std::cout << "Assignment ScavTrap Operator" << std::endl;
+    ClapTrap::operator=(other);
+    return (*this);
 }
 
 /* MEMBER FUNCTIONS */
 void ScavTrap::challengeNewcomer(std::string const& target)
 {
-	int i;
-	int random_damage;
-	std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
+    int i;
+    int random_damage;
+    std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
 
-	if (_energy_points < 25) {
-		std::cout << _model << " " << _name << " has not enough energy left to challenge anybody." << std::endl;
-	}
-	else {
-		_energy_points -= 25;
-		i = rand() % 5;
-		random_damage = rand() % 100;
-		std::cout << _model << " " << _name << " challenges the infamous " << target << " at the " << challenge[i] << " challenge, causing " << random_damage << " points of damage" << std::endl;
-	}
+    if (_energy_points < 25) {
+        std::cout << _model << " " << _name << " has not enough energy left to challenge anybody." << std::endl;
+    }
+    else {
+        _energy_points -= 25;
+        i = rand() % 5;
+        random_damage = rand() % 100;
+        std::cout << _model << " " << _name << " challenges the infamous " << target << " at the " << challenge[i] << " challenge, causing " << random_damage << " points of damage" << std::endl;
+    }
 }

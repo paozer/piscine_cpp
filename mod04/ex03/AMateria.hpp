@@ -20,21 +20,21 @@ class ICharacter;
 
 class AMateria
 {
-	public:
-		AMateria();
-		AMateria(const std::string & type);
-		AMateria(const AMateria&);
-		virtual ~AMateria();
-		AMateria &operator=(const AMateria&);
+    public:
+        AMateria();
+        AMateria(const std::string & type);
+        AMateria(const AMateria&);
+        virtual ~AMateria();
+        AMateria &operator=(const AMateria&);
 
-		std::string const& getType() const;
-		unsigned int getXP() const;
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+        std::string const& getType() const;
+        unsigned int getXP() const;
+        virtual AMateria* clone() const = 0;
+        virtual void use(ICharacter& target);
 
-	private:
-		unsigned int _xp;
-		std::string _type;
+    private:
+        unsigned int _xp;
+        std::string _type;
 };
 
 #endif

@@ -20,14 +20,14 @@
 
 class ScavTrap: public ClapTrap
 {
-	public:
-		ScavTrap();
-		ScavTrap(const std::string& name);
-		ScavTrap(const ScavTrap&);
-		~ScavTrap();
-		ScavTrap& operator=(const ScavTrap&);
+    public:
+        ScavTrap();
+        ScavTrap(const std::string& name);
+        ScavTrap(const ScavTrap&);
+        ~ScavTrap();
+        ScavTrap& operator=(const ScavTrap&);
 
-		void challengeNewcomer(std::string const& target);
+        void challengeNewcomer(std::string const& target);
 };
 
 #endif

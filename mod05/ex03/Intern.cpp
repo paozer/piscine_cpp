@@ -20,16 +20,16 @@ Form* Intern::createPresidentialPardon(const std::string& target)
 
 Form* Intern::makeForm(const std::string& type, const std::string& target)
 {
-	typedef Form* (Intern::*fct_ptr) (const std::string& type);
-	static std::string form_type[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
-	fct_ptr arr[3] = {&Intern::createRobotomyRequest, &Intern::createShrubberyCreation, &Intern::createPresidentialPardon};
+    typedef Form* (Intern::*fct_ptr) (const std::string& type);
+    static std::string form_type[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
+    fct_ptr arr[3] = {&Intern::createRobotomyRequest, &Intern::createShrubberyCreation, &Intern::createPresidentialPardon};
 
-	for (int i = 0; i < 3; ++i) {
-		if (type == form_type[i]) {
-			std::cout << "Intern creates " << target << std::endl;
-			return ((this->*arr[i]) (target));
-		}
-	}
-	std::cout << type << " is unknow as a type of form" << std::endl;
-	return (nullptr);
+    for (int i = 0; i < 3; ++i) {
+        if (type == form_type[i]) {
+            std::cout << "Intern creates " << target << std::endl;
+            return ((this->*arr[i]) (target));
+        }
+    }
+    std::cout << type << " is unknow as a type of form" << std::endl;
+    return (nullptr);
 }

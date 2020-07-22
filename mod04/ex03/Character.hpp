@@ -20,24 +20,24 @@
 
 class Character: public ICharacter
 {
-	public:
-		Character();
-		Character(std::string name);
-		Character(const Character&);
-		virtual ~Character();
-		Character &operator=(const Character&);
+    public:
+        Character();
+        Character(std::string name);
+        Character(const Character&);
+        virtual ~Character();
+        Character &operator=(const Character&);
 
-		virtual std::string const & getName() const;
-		virtual void equip(AMateria* m);
-		virtual void unequip(int idx);
-		virtual void use(int idx, ICharacter& target);
+        virtual std::string const & getName() const;
+        virtual void equip(AMateria* m);
+        virtual void unequip(int idx);
+        virtual void use(int idx, ICharacter& target);
 
-	private:
-		std::string _name;
-		int _inventory_size;
-		AMateria** _inventory;
+    private:
+        std::string _name;
+        int _inventory_size;
+        AMateria** _inventory;
 
-		void deleteInventory();
+        void deleteInventory();
 };
 
 #endif

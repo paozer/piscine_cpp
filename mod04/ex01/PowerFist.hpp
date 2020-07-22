@@ -18,13 +18,13 @@
 
 class PowerFist: public AWeapon
 {
-	public:
-		PowerFist();
-		PowerFist(const PowerFist&);
-		~PowerFist();
-		PowerFist &operator=(const PowerFist&);
+    public:
+        PowerFist();
+        PowerFist(const PowerFist&);
+        ~PowerFist();
+        PowerFist &operator=(const PowerFist&);
 
-		virtual void attack() const;
+        virtual void attack() const;
 };
 
 #endif

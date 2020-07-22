@@ -7,24 +7,24 @@
 
 class Bureaucrat
 {
-	public:
-		Bureaucrat(const std::string& name, int grade);
-		Bureaucrat(const Bureaucrat&);
-		Bureaucrat& operator=(const Bureaucrat&);
-		~Bureaucrat();
+    public:
+        Bureaucrat(const std::string& name, int grade);
+        Bureaucrat(const Bureaucrat&);
+        Bureaucrat& operator=(const Bureaucrat&);
+        ~Bureaucrat();
 
-		std::string getName() const;
-		int getGrade() const;
-		Bureaucrat& operator++();
-		Bureaucrat& operator--();
+        std::string getName() const;
+        int getGrade() const;
+        Bureaucrat& operator++();
+        Bureaucrat& operator--();
 
-		struct GradeToLow: public std::exception {};
-		struct GradeToHigh: public std::exception {};
+        struct GradeToLow: public std::exception {};
+        struct GradeToHigh: public std::exception {};
 
-	private:
-		Bureaucrat();
-		const std::string _name;
-		int _grade;
+    private:
+        Bureaucrat();
+        const std::string _name;
+        int _grade;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);

@@ -20,16 +20,16 @@
 
 class NinjaTrap: public ClapTrap
 {
-	public:
-		NinjaTrap();
-		NinjaTrap(const std::string& name);
-		NinjaTrap(const NinjaTrap&);
-		~NinjaTrap();
-		NinjaTrap &operator=(const NinjaTrap&);
+    public:
+        NinjaTrap();
+        NinjaTrap(const std::string& name);
+        NinjaTrap(const NinjaTrap&);
+        ~NinjaTrap();
+        NinjaTrap &operator=(const NinjaTrap&);
 
-		void ninjaShoebox(FragTrap& ft);
-		void ninjaShoebox(NinjaTrap& nt);
-		void ninjaShoebox(ScavTrap& nt);
+        void ninjaShoebox(FragTrap& ft);
+        void ninjaShoebox(NinjaTrap& nt);
+        void ninjaShoebox(ScavTrap& nt);
 };
 
 #endif

@@ -10,7 +10,7 @@ CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 
-%.o: 		%.cpp Array.hpp
+%.o:		%.cpp Array.hpp
 			$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
 all:		$(NAME)
@@ -21,9 +21,9 @@ $(NAME):	$(OBJS)
 clean:
 			$(RM) $(OBJS)
 
-fclean: 	clean
+fclean:		clean
 			$(RM) $(NAME)
 
-re: 		fclean all
+re:			fclean all
 
-.PHONY: 	all clean fclean re
+.PHONY:		all clean fclean re

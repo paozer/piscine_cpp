@@ -23,15 +23,15 @@ Victim::Victim(const Victim& other)
 
 Victim& Victim::operator=(const Victim& other)
 {
-	if (this != &other)
-		_name = other._name;
-	return (*this);
+    if (this != &other)
+        _name = other._name;
+    return (*this);
 }
 
 std::ostream& operator<<(std::ostream& os, const Victim& v)
 {
-	os << "I'm " << v.getName() << " and I like otters!" << std::endl;
-	return (os);
+    os << "I'm " << v.getName() << " and I like otters!" << std::endl;
+    return (os);
 }
 
 std::string Victim::getName() const { return (_name); }

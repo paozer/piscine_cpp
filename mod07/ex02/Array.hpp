@@ -8,8 +8,8 @@
 template <typename T>
 class Array
 {
-	public:
-		Array(unsigned int size = 0) :
+    public:
+        Array(unsigned int size = 0) :
             _size(size),
             _data(_size ? new T[_size] : nullptr)
         {
@@ -17,10 +17,10 @@ class Array
                 _data[i] = 0;
         }
 
-		~Array() { delete[] _data; };
-		Array(const Array & other) : _data(nullptr) { *this = other; }
+        ~Array() { delete[] _data; };
+        Array(const Array & other) : _data(nullptr) { *this = other; }
 
-		Array &operator=(const Array & other)
+        Array &operator=(const Array & other)
         {
             if (this != &other) {
                 delete[] _data;
@@ -41,7 +41,7 @@ class Array
 
         unsigned int size() const { return (_size); }
 
-	private:
+    private:
         unsigned int _size;
         T *_data;
 
