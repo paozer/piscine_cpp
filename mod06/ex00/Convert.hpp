@@ -6,6 +6,7 @@
 # include <iomanip> // std::fixed, std::setprecision
 # include <climits> // INT_MAX, INT_MIN
 # include <cmath> // HUGE_VAL
+# include <cstring> // strlen
 
 class Convert
 {
