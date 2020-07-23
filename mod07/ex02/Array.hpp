@@ -9,12 +9,10 @@ template <typename T>
 class Array
 {
     public:
-        Array(unsigned int size = 0) :
-            _size(size),
-            _data(new T[_size]())
-        {}
+        Array(unsigned int size = 0) : _size(size), _data(new T[_size]()) {}
 
         ~Array() { delete[] _data; };
+
         Array(const Array & other) : _data(nullptr) { *this = other; }
 
         Array &operator=(const Array & other)
@@ -32,7 +30,7 @@ class Array
         T &operator[](size_t i)
         {
             if (indexIsOutOfRange(i))
-                throw std::out_of_range("index out_of_range");
+                throw std::out_of_range("out_of_range");
             return (_data[i]);
         }
 
@@ -42,7 +40,7 @@ class Array
         unsigned int _size;
         T *_data;
 
-        bool indexIsOutOfRange(unsigned int i) { return (i < 0 || _size <= i); }
+        bool indexIsOutOfRange(unsigned int i) { return (_size <= i); }
 };
 
 #endif
