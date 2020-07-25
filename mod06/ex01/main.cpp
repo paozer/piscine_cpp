@@ -8,5 +8,7 @@ int main()
     std::cout << "s1 = " << clean->s1 << std::endl;
     std::cout << "s2 = " << clean->s2 << std::endl;
     std::cout << "n  = " << clean->n << std::endl;
+    delete static_cast<char*>(raw);
+    delete clean;
     return (0);
 }
