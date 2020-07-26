@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 18:52:31 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/22 18:52:31 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ZombieEvent.hpp"
 
 void    ZombieEvent::setZombieType(std::string type) { _type = type; }

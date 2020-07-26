@@ -3,6 +3,8 @@
 # define SPAN_HPP
 
 # include <iostream>
+# include <algorithm>
+# include <climits>
 # include <cstdlib>
 # include <vector>
 

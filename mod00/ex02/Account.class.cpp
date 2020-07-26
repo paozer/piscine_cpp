@@ -63,9 +63,8 @@ void    Account::makeDeposit( int deposit )
         ++_totalNbDeposits;
         std::cout << deposit << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits << std::endl;
     }
-    else {
+    else
         std::cout << "refused" << std::endl;
-    }
 }
 
 bool    Account::makeWithdrawal( int withdrawal )

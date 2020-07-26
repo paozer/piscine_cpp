@@ -1,19 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 17:23:09 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/22 17:23:10 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Pony.hpp"
 
-Pony::Pony(std::string name, std::string color, int age, int height)
-    : _name(name), _color(color), _age(age), _height(height)
+Pony::Pony(std::string name, std::string color, int age, int height) :
+    _name(name), _color(color), _age(age), _height(height)
 { std::cout << "Object created." << std::endl; }
 
 Pony::~Pony() { std::cout << "Object destroyed." << std::endl; }

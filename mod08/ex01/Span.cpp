@@ -37,7 +37,6 @@ int Span::shortestSpan() const
 {
     if (_data.empty() || _data.size() == 1)
         throw std::exception();
-
     int shorty = INT_MAX;
     for (unsigned int i(0); i < _data.size(); ++i) {
         for (unsigned int j(i + 1); j < _data.size(); ++j) {

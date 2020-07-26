@@ -1,16 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/21 17:14:58 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/21 17:14:59 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Contact.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
 
-#include "main.hpp"
+void    search_phone_book(Contact* pb, int pb_size);
+Contact create_contact_from_input();
+void    display_all_contacts(Contact pb[], int &pb_size);
 
 int     main(void)
 {
@@ -25,17 +20,15 @@ int     main(void)
         std::cout << "> ";
         std::getline(std::cin, cmd);
         if (cmd == "ADD") {
-            if (pb_size == 8) {
+            if (pb_size == 8)
                 std::cout << "ERROR: Phonebook is full." << std::endl;
-            }
             else {
                 pb[pb_size] = create_contact_from_input();
                 ++pb_size;
             }
         }
-        else if (cmd == "SEARCH") {
+        else if (cmd == "SEARCH")
             search_phone_book(pb, pb_size);
-        }
     }
     while (cmd != "EXIT");
     return (0);

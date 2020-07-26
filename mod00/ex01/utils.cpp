@@ -1,16 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   utils.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/21 17:15:25 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/21 17:15:31 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Contact.hpp"
+#include <iostream>
 
-#include "main.hpp"
+void    print_f(std::string str);
 
 Contact create_contact_from_input()
 {
@@ -29,25 +20,22 @@ void    display_all_contacts(Contact pb[], int &pb_size)
 {
     std::string header[4] = {"Index", "First Name", "Last Name", "Login"};
 
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < 4; ++i)
         print_f(header[i]);
-    }
     std::cout << "|" << std::endl;
     for (int i = 0; i < pb_size; ++i) {
         std::cout << '|' << std::setw(10) << std::setfill(' ') << i;
-        print_f(pb[i].get_first_name());
-        print_f(pb[i].get_last_name());
-        print_f(pb[i].get_login());
+        print_f(pb[i].getFirstName());
+        print_f(pb[i].getLastName());
+        print_f(pb[i].getLogin());
         std::cout << "|" << std::endl;
     }
 }
 
 void    print_f(std::string str)
 {
-    if (str.length() > 10) {
+    if (str.length() > 10)
         std::cout << '|' << str.substr(0, 9) << '.';
-    }
-    else {
+    else
         std::cout << '|' << std::setw(10) << std::setfill(' ') << str;
-    }
 }

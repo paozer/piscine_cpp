@@ -27,7 +27,7 @@ int main()
             sp.shortestSpan();
         }
         catch (const std::exception & e) {
-            std::cout << "shortesSpan() on a Span(0) throwed" << std::endl;
+            std::cout << "shortestSpan() on a Span(0) throwed" << std::endl;
         }
         try {
             sp.longestSpan();
@@ -58,7 +58,7 @@ int main()
             sp.shortestSpan();
         }
         catch (const std::exception & e) {
-            std::cout << "shortesSpan() on a Span with one number throwed" << std::endl;
+            std::cout << "shortestSpan() on a Span with one number throwed" << std::endl;
         }
         std::cout << std::endl;
         sp.addNumber(9);

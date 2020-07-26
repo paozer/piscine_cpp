@@ -1,16 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 17:58:25 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/29 17:58:25 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
+#include <iomanip>
 #include "Fixed.hpp"
 
 int main(void) {
@@ -19,12 +8,12 @@ int main(void) {
     Fixed c (4);
     Fixed d (4);
 
-    std::cout << a << " > " << b << " is " << (a > b) << std::endl;
-    std::cout << a << " >= " << b << " is " << (a >= b) << std::endl;
-    std::cout << a << " < " << b << " is " << (a < b) << std::endl;
-    std::cout << a << " <= " << b << " is " << (a <= b) << std::endl;
-    std::cout << a << " == " << b << " is " << (a == b) << std::endl;
-    std::cout << c << " == " << d << " is " << (c == d) << std::endl;
+    std::cout << std::boolalpha << a << " > " << b << " is " << (a > b) << std::endl;
+    std::cout << std::boolalpha << a << " >= " << b << " is " << (a >= b) << std::endl;
+    std::cout << std::boolalpha << a << " < " << b << " is " << (a < b) << std::endl;
+    std::cout << std::boolalpha << a << " <= " << b << " is " << (a <= b) << std::endl;
+    std::cout << std::boolalpha << a << " == " << b << " is " << (a == b) << std::endl;
+    std::cout << std::boolalpha << c << " == " << d << " is " << (c == d) << std::endl;
     std::cout << std::endl;
 
     std::cout << "a++ = " << a++ << " a = " << a << std::endl;

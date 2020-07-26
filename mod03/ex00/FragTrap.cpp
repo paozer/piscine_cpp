@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 03:17:40 by pramella          #+#    #+#             */
-/*   Updated: 2020/07/02 03:17:41 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "FragTrap.hpp"
 
 /* CANONICAL FORM */
@@ -65,45 +53,36 @@ void FragTrap::meleeAttack(std::string const& target) const
 
 void FragTrap::vaulthunter_dot_exe(std::string const& target)
 {
-    int i;
-    int random_damage;
-    std::string attack[5] = {"potato", "love", "ninja", "beer", "hacker"};
-
-    if (_energy_points < 25) {
+    if (_energy_points < 25)
         std::cout << "There is not enough energy left for the vaulthunter_dot_exe attack." << std::endl;
-    }
     else {
+        int rand_attack = rand() % 5;
+        int rand_damage = rand() % 100;
+        static std::string attack[5] = {"potato", "love", "ninja", "beer", "hacker"};
+
         _energy_points -= 25;
-        i = rand() % 5;
-        random_damage = rand() % 100;
-        std::cout << "FR4G-TP " << _name << " executes a " << attack[i] << " attack on " << target << " causing " << random_damage << " points of damage" << std::endl;
+        std::cout << "FR4G-TP " << _name << " executes a " << attack[rand_attack] << " attack on " << target << " causing " << rand_damage << " points of damage" << std::endl;
     }
 }
 
 void FragTrap::takeDamage(unsigned int amount)
 {
-    if (_armor_damage_reduction > amount) {
+    if (_armor_damage_reduction > amount)
         amount = 0;
-    }
-    else {
+    else
         amount -= _armor_damage_reduction;
-    }
-    if (amount > _hit_points) {
+    if (amount > _hit_points)
         _hit_points = 0;
-    }
-    else {
+    else
         _hit_points -= amount;
-    }
     std::cout << "After taking damage FR4G-TP " << _name << " has " << _hit_points << " HP!" << std::endl;
 }
 
 void FragTrap::beRepaired(unsigned int amount)
 {
-    if (_hit_points + amount > _max_hit_points) {
+    if (_hit_points + amount > _max_hit_points)
         _hit_points = _max_hit_points;
-    }
-    else {
+    else
         _hit_points += amount;
-    }
     std::cout << "After being repaired FR4G-TP " << _name << " has " << _hit_points << " HP!" << std::endl;
 }

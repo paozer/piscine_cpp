@@ -5,9 +5,9 @@
 # include <algorithm>
 
 template <typename T>
-bool easyfind(T container, int n)
+bool easyfind(T & container, int value)
 {
-    return (std::find(container.begin(), container.end(), n) != container.end());
+    return (std::find(container.begin(), container.end(), value) != container.end());
 }
 
 #endif

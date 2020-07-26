@@ -1,25 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Human.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 22:24:27 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/24 22:24:27 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Human.hpp"
 
-void Human::meleeAttack(std::string const& target)
-{ std::cout << "Melee attack on " << target << std::endl; }
+void Human::meleeAttack(std::string const& target) { std::cout << "Melee attack on " << target << std::endl; }
 
-void Human::rangedAttack(std::string const& target)
-{ std::cout << "Ranged attack on " << target << std::endl; }
+void Human::rangedAttack(std::string const& target) { std::cout << "Ranged attack on " << target << std::endl; }
 
-void Human::intimidatingShout(std::string const& target)
-{ std::cout << "Intimidating shout towards " << target << std::endl; }
+void Human::intimidatingShout(std::string const& target) { std::cout << "Intimidating shout towards " << target << std::endl; }
 
 void Human::action(std::string const& action_name, std::string const& target)
 {

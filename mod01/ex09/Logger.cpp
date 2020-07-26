@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Logger.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 22:24:15 by pramella          #+#    #+#             */
-/*   Updated: 2020/06/24 22:24:15 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Logger.hpp"
 
 std::string getTimestamp();
@@ -38,10 +26,7 @@ void        Logger::logToFile(std::string message)
     fs << makeLogEntry(message);
 }
 
-std::string Logger::makeLogEntry(std::string message)
-{
-    return ("[" + getTimestamp() + "] " + message + "\n");
-}
+std::string Logger::makeLogEntry(std::string message) { return ("[" + getTimestamp() + "] " + message + "\n"); }
 
 std::string getTimestamp(void)
 {
