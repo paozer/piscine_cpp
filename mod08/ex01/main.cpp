@@ -1,5 +1,13 @@
 #include "Span.hpp"
 
+template <typename Iterator>
+void print_iterator(Iterator it, Iterator et)
+{
+    for (; it != et; ++it)
+        std::cout << *it << ",";
+    std::cout << std::endl;
+}
+
 int main()
 {
     {
@@ -84,6 +92,25 @@ int main()
         for (int i(0); i < 10000; ++i)
             sp.addNumber(i);
         std::cout << "sp = 0, 1, 2, ... 9999" << std::endl;
+        std::cout << "longestSpan() = " << sp.longestSpan() << std::endl;
+        std::cout << "shortestSpan() = " << sp.shortestSpan() << std::endl;
+        std::cout << std::endl;
+    }
+    {
+        std::cout << "addNumber using iterators tests" << std::endl << std::endl;
+        int arr[] = {10, 10, 10, 42};
+        Span sp (4);
+
+        std::cout << "arr used for template addNumber call ";
+        print_iterator(std::begin(arr), std::end(arr));
+        std::cout << std::endl;
+        try {
+            sp.addNumber(std::begin(arr), std::end(arr));
+            //sp.addNumber(&arr[0], &arr[4]); // both addNumber are equivalent
+        }
+        catch (const std::exception & e) {
+            std::cout << "catched exception" << std::endl;
+        }
         std::cout << "longestSpan() = " << sp.longestSpan() << std::endl;
         std::cout << "shortestSpan() = " << sp.shortestSpan() << std::endl;
     }
