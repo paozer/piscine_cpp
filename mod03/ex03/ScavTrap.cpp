@@ -1,20 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 16:03:11 by pramella          #+#    #+#             */
-/*   Updated: 2020/07/02 16:03:11 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ScavTrap.hpp"
 
 /* CANONICAL FORM */
-ScavTrap::ScavTrap()
-{ std::cout << "Default ScavTrap Constructor" << std::endl; }
+ScavTrap::ScavTrap() { std::cout << "Default ScavTrap Constructor" << std::endl; }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name, "SC4V-TP", 100, 100, 50, 50, 1, 20, 15, 3)
 { std::cout << "String ScavTrap Constructor" << std::endl; }
@@ -37,17 +24,14 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 /* MEMBER FUNCTIONS */
 void ScavTrap::challengeNewcomer(std::string const& target)
 {
-    int i;
-    int random_damage;
-    std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
-
-    if (_energy_points < 25) {
-        std::cout << _model << " " << _name << " has not enough energy left to challenge anybody." << std::endl;
-    }
+    if (_energy_points < 25)
+        std::cout << "SC4V-TP " << _name << " has not enough energy left to challenge anybody." << std::endl;
     else {
+        int rand_challenge = rand() % 5;
+        int rand_damage = rand() % 100;
+        static std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
+
         _energy_points -= 25;
-        i = rand() % 5;
-        random_damage = rand() % 100;
-        std::cout << _model << " " << _name << " challenges the infamous " << target << " at the " << challenge[i] << " challenge, causing " << random_damage << " points of damage" << std::endl;
+        std::cout << "SC4V-TP " << _name << " challenges the infamous " << target << " at the " << challenge[rand_challenge] << " challenge, causing " << rand_damage << " points of damage" << std::endl;
     }
 }

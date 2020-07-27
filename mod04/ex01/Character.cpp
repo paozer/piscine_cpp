@@ -2,8 +2,7 @@
 
 Character::Character() {}
 
-Character::Character(std::string const& name) :
-    _name(name), _ap(40), _current_weapon(nullptr) {}
+Character::Character(std::string const& name) : _name(name), _ap(40), _current_weapon(nullptr) {}
 
 Character::~Character() {}
 

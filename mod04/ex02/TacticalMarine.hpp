@@ -20,4 +20,3 @@ class TacticalMarine: public ISpaceMarine
 };
 
 #endif
-

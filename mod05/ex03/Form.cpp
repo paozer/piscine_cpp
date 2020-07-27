@@ -3,8 +3,8 @@
 
 Form::Form() : _req_signing_grade(0), _req_execution_grade(0) {}
 
-Form::Form(const std::string& name, int req_signing_grade, int req_execution_grade)
-    : _name(name), _is_signed(false),
+Form::Form(const std::string& name, int req_signing_grade, int req_execution_grade) :
+    _name(name), _is_signed(false),
     _req_signing_grade(req_signing_grade),
     _req_execution_grade(req_execution_grade)
 {

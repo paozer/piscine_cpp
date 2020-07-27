@@ -14,7 +14,7 @@ Span& Span::operator=(const Span& other)
         _max_size = other._max_size;
         _data = other._data;
     }
-	return (*this);
+    return (*this);
 }
 
 void Span::addNumber(int n)

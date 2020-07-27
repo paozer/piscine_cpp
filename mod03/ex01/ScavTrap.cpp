@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 13:24:49 by pramella          #+#    #+#             */
-/*   Updated: 2020/07/02 13:24:50 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ScavTrap.hpp"
 
 /* CANONICAL FORM */
@@ -65,45 +53,36 @@ void ScavTrap::meleeAttack(std::string const& target) const
 
 void ScavTrap::challengeNewcomer(std::string const& target)
 {
-    int i;
-    int random_damage;
-    std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
-
-    if (_energy_points < 25) {
+    if (_energy_points < 25)
         std::cout << "SC4V-TP " << _name << " has not enough energy left to challenge anybody." << std::endl;
-    }
     else {
+        int rand_challenge = rand() % 5;
+        int rand_damage = rand() % 100;
+        static std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};
+
         _energy_points -= 25;
-        i = rand() % 5;
-        random_damage = rand() % 100;
-        std::cout << "SC4V-TP " << _name << " challenges the infamous " << target << " at the " << challenge[i] << " challenge, causing " << random_damage << " points of damage" << std::endl;
+        std::cout << "SC4V-TP " << _name << " challenges the infamous " << target << " at the " << challenge[rand_challenge] << " challenge, causing " << rand_damage << " points of damage" << std::endl;
     }
 }
 
 void ScavTrap::takeDamage(unsigned int amount)
 {
-    if (_armor_damage_reduction > amount) {
+    if (_armor_damage_reduction > amount)
         amount = 0;
-    }
-    else {
+    else
         amount -= _armor_damage_reduction;
-    }
-    if (amount > _hit_points) {
+    if (amount > _hit_points)
         _hit_points = 0;
-    }
-    else {
+    else
         _hit_points -= amount;
-    }
     std::cout << "After taking damage SC4V-TP " << _name << " has " << _hit_points << " HP!" << std::endl;
 }
 
 void ScavTrap::beRepaired(unsigned int amount)
 {
-    if (_hit_points + amount > _max_hit_points) {
+    if (_hit_points + amount > _max_hit_points)
         _hit_points = _max_hit_points;
-    }
-    else {
+    else
         _hit_points += amount;
-    }
     std::cout << "After being repaired SC4V-TP " << _name << " has " << _hit_points << " HP!" << std::endl;
 }

@@ -6,8 +6,7 @@ Victim::Victim(const std::string& name) : _name(name)
 Victim::~Victim()
 { std::cout << "Victim " << _name << " just died for no apparent reason!" << std::endl; }
 
-Victim::Victim(const Victim& other)
-{ *this = other; }
+Victim::Victim(const Victim& other) { *this = other; }
 
 Victim& Victim::operator=(const Victim& other)
 {
@@ -17,10 +16,7 @@ Victim& Victim::operator=(const Victim& other)
 }
 
 std::ostream& operator<<(std::ostream& os, const Victim& v)
-{
-    os << "I'm " << v.getName() << " and I like otters!" << std::endl;
-    return (os);
-}
+{ return (os << "I'm " << v.getName() << " and I like otters!" << std::endl); }
 
 std::string Victim::getName() const { return (_name); }
 

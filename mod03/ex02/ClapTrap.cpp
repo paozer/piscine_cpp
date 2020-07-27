@@ -1,19 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 16:02:59 by pramella          #+#    #+#             */
-/*   Updated: 2020/07/02 16:03:00 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
-{ std::cout << "Default ClapTrap Constructor" << std::endl; }
+ClapTrap::ClapTrap() { std::cout << "Default ClapTrap Constructor" << std::endl; }
 
 ClapTrap::ClapTrap(const std::string& name, const std::string& model, unsigned int hit_points,
                 unsigned int max_hit_points, unsigned int energy_points,
@@ -26,8 +13,7 @@ ClapTrap::ClapTrap(const std::string& name, const std::string& model, unsigned i
     _armor_damage_reduction(armor_damage_reduction)
 { std::cout << "Arguments ClapTrap Constructor" << std::endl; }
 
-ClapTrap::~ClapTrap()
-{ std::cout << "Default ClapTrap Destructor" << std::endl; }
+ClapTrap::~ClapTrap() { std::cout << "Default ClapTrap Destructor" << std::endl; }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
@@ -66,28 +52,22 @@ void ClapTrap::meleeAttack(std::string const& target) const
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (_armor_damage_reduction > amount) {
+    if (_armor_damage_reduction > amount)
         amount = 0;
-    }
-    else {
+    else
         amount -= _armor_damage_reduction;
-    }
-    if (amount > _hit_points) {
+    if (amount > _hit_points)
         _hit_points = 0;
-    }
-    else {
+    else
         _hit_points -= amount;
-    }
     std::cout << "After taking damage " << _model << " " << _name << " has " << _hit_points << " HP!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (_hit_points + amount > _max_hit_points) {
+    if (_hit_points + amount > _max_hit_points)
         _hit_points = _max_hit_points;
-    }
-    else {
+    else
         _hit_points += amount;
-    }
     std::cout << "After being repaired " << _model << " " << _name << " has " << _hit_points << " HP!" << std::endl;
 }

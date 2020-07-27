@@ -1,8 +1,7 @@
 #include "MateriaSource.hpp"
 
 /* CONSTRUCTION DESTRUCTION */
-MateriaSource::MateriaSource() :
-    _size_learned_materia(0), _learned_materia(new AMateria*[4]()) {}
+MateriaSource::MateriaSource() : _size_learned_materia(0), _learned_materia(new AMateria*[4]()) {}
 
 MateriaSource::~MateriaSource() { delete[] _learned_materia; }
 

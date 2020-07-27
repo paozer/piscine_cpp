@@ -1,27 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   NinjaTrap.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pramella <pramella@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 23:53:41 by pramella          #+#    #+#             */
-/*   Updated: 2020/07/02 23:53:42 by pramella         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "NinjaTrap.hpp"
 
 /* CANONICAL FORM */
-NinjaTrap::NinjaTrap()
-{ std::cout << "Default NinjaTrap Constructor" << std::endl; }
+NinjaTrap::NinjaTrap() { std::cout << "Default NinjaTrap Constructor" << std::endl; }
 
 NinjaTrap::NinjaTrap(const std::string& name) :
     ClapTrap(name, "NINJ4-TP", 60, 60, 120, 120, 1, 60, 5, 0)
 { std::cout << "String NinjaTrap Constructor" << std::endl; }
 
-NinjaTrap::~NinjaTrap()
-{ std::cout << "Default NinjaTrap Destructor" << std::endl; }
+NinjaTrap::~NinjaTrap() { std::cout << "Default NinjaTrap Destructor" << std::endl; }
 
 NinjaTrap::NinjaTrap(const NinjaTrap& other)
 {

@@ -9,11 +9,11 @@
 template <typename T, typename Container = std::deque<T> >
 class mutantStack : public std::stack<T, Container>
 {
-	public:
-		mutantStack() {}
-		mutantStack(const mutantStack & other) { *this = other; }
-		~mutantStack() {}
-		mutantStack & operator=(const mutantStack & other)
+    public:
+        mutantStack() {}
+        mutantStack(const mutantStack & other) { *this = other; }
+        ~mutantStack() {}
+        mutantStack & operator=(const mutantStack & other)
         {
             // in stack class definition c is the underlying container here deque
             if (this != &other)

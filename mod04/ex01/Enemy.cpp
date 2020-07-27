@@ -4,11 +4,9 @@ Enemy::Enemy() {}
 
 Enemy::~Enemy() {}
 
-Enemy::Enemy(int hp, std::string const& type) :
-    _hp(hp), _type(type) {}
+Enemy::Enemy(int hp, std::string const& type) : _hp(hp), _type(type) {}
 
-Enemy::Enemy(const Enemy& other)
-{ *this = other; }
+Enemy::Enemy(const Enemy& other) { *this = other; }
 
 Enemy& Enemy::operator=(const Enemy& other)
 {

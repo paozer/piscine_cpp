@@ -1,8 +1,7 @@
 #include "Sorcerer.hpp"
 
 /* CANONICAL FORM & << OVERLOAD */
-Sorcerer::Sorcerer()
-{ std::cout << "This should never appear." << std::endl; }
+Sorcerer::Sorcerer() { std::cout << "This should never appear." << std::endl; }
 
 Sorcerer::Sorcerer(const std::string& name, const std::string& title) :
     _name(name), _title(title)
@@ -37,7 +36,5 @@ std::ostream& operator<<(std::ostream& os, const Sorcerer& s)
 std::string Sorcerer::getName() const { return (_name); }
 std::string Sorcerer::getTitle() const { return (_title); }
 
-
 /* MEMBER FUNCTIONS */
-void Sorcerer::polymorph(Victim const& v) const
-{ v.getPolymorphed(); }
+void Sorcerer::polymorph(Victim const& v) const { v.getPolymorphed(); }

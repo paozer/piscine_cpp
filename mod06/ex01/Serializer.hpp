@@ -4,7 +4,7 @@
 
 # include <iostream>
 
-#define STRING_SIZE 8
+#define STRING_SIZE 8 * sizeof(char)
 
 struct Data
 {

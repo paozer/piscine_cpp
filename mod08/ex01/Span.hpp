@@ -10,11 +10,11 @@
 
 class Span
 {
-	public:
-		Span(unsigned int size);
-		Span(const Span&);
-		~Span();
-		Span &operator=(const Span&);
+    public:
+        Span(unsigned int size);
+        Span(const Span&);
+        ~Span();
+        Span &operator=(const Span&);
 
         void addNumber(int);
         int shortestSpan() const;
@@ -30,8 +30,8 @@ class Span
             }
         }
 
-	private:
-		Span();
+    private:
+        Span();
         unsigned int _max_size;
         std::vector<int> _data;
 };

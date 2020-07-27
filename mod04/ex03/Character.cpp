@@ -1,8 +1,7 @@
 #include "Character.hpp"
 
 /* CONSTRUCTION DESTRUCTION */
-Character::Character() :
-    _name(), _inventory_size(0),  _inventory(new AMateria*[4]()) {}
+Character::Character() : _name(), _inventory_size(0),  _inventory(new AMateria*[4]()) {}
 
 Character::Character(std::string name) :
     _name(name), _inventory_size(0),  _inventory(new AMateria*[4]()) {}
