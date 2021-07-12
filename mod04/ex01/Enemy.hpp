@@ -1,8 +1,8 @@
 #pragma once
 #ifndef ENEMY_HPP
-# define ENEMY_HPP
+#define ENEMY_HPP
 
-# include <iostream>
+#include <iostream>
 
 class Enemy
 {

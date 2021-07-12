@@ -14,7 +14,7 @@ Enemy& Enemy::operator=(const Enemy& other)
         _hp = other._hp;
         _type = other._type;
     }
-    return (*this);
+    return *this;
 }
 
 void Enemy::takeDamage(int amount)
@@ -23,5 +23,5 @@ void Enemy::takeDamage(int amount)
         _hp -= amount;
 }
 
-std::string Enemy::getType() const { return (_type); }
-int Enemy::getHP() const { return (_hp); }
+std::string Enemy::getType() const { return _type; }
+int Enemy::getHP() const { return _hp; }

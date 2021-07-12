@@ -1,11 +1,11 @@
 #include "ZombieEvent.hpp"
 #include "Zombie.hpp"
 
-int main(void)
+int main()
 {
     ZombieEvent ze;
 
-    std::srand(time(nullptr));
+    std::srand(time(NULL));
     std::cout << "Type is [really angry]" << std::endl;
     ze.setZombieType("really angry");
     ze.randomChump();

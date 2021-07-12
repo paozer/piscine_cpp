@@ -24,7 +24,7 @@ Form& Form::operator=(const Form& other)
 {
     if (this != &other)
         _is_signed = other._is_signed;
-    return (*this);
+    return *this;
 }
 
 Form::~Form() {}
@@ -61,11 +61,11 @@ void Form::signForm(const Bureaucrat& b)
     }
 }
 
-const std::string& Form::getName() const { return (_name); }
-const int& Form::getReqSigningGrade() const { return (_req_signing_grade); }
-const int& Form::getReqExecutionGrade() const { return (_req_execution_grade); }
+const std::string& Form::getName() const { return _name; }
+const int& Form::getReqSigningGrade() const { return _req_signing_grade; }
+const int& Form::getReqExecutionGrade() const { return _req_execution_grade; }
 
-bool Form::isSigned() const { return (_is_signed); }
+bool Form::isSigned() const { return _is_signed; }
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
@@ -73,5 +73,5 @@ std::ostream& operator<<(std::ostream& os, const Form& f)
     if (!f.isSigned())
         os << "not ";
     os << "signed. It requires grade " << f.getReqSigningGrade() << " for signing and " << f.getReqExecutionGrade() << " for execution" << std::endl;
-    return (os);
+    return os;
 }

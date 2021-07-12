@@ -11,7 +11,7 @@ PlasmaRifle::~PlasmaRifle() {}
 PlasmaRifle& PlasmaRifle::operator=(const PlasmaRifle& other)
 {
     AWeapon::operator=(other);
-    return (*this);
+    return *this;
 }
 
 void PlasmaRifle::attack() const { std::cout << "* piouuu piouuu piouuu *" << std::endl; }

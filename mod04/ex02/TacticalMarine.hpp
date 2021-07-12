@@ -1,9 +1,9 @@
 #pragma once
 #ifndef TACTICALMARINE_HPP
-# define TACTICALMARINE_HPP
+#define TACTICALMARINE_HPP
 
-# include <iostream>
-# include "ISpaceMarine.hpp"
+#include <iostream>
+#include "ISpaceMarine.hpp"
 
 class TacticalMarine: public ISpaceMarine
 {

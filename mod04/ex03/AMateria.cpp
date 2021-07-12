@@ -13,7 +13,7 @@ AMateria& AMateria::operator=(const AMateria& other)
 {
     if (this != &other)
         _xp = other._xp;
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

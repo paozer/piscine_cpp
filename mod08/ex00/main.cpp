@@ -6,7 +6,7 @@
 
 int main()
 {
-    srand(time(nullptr));
+    srand(time(NULL));
     {
         std::vector<int> v;
 
@@ -53,5 +53,5 @@ int main()
         std::cout << std::boolalpha << "easyfind(54) " << easyfind(l, 54) << std::endl;
         std::cout << std::boolalpha << "easyfind(93587) " << easyfind(l, 93587) << std::endl;
     }
-    return (0);
+    return 0;
 }

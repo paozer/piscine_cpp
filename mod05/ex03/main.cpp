@@ -22,5 +22,5 @@ int main()
     b.executeForm(*f);
     f->signForm(b);
     b.executeForm(*f);
-    return (0);
+    return 0;
 }

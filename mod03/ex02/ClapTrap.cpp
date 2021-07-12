@@ -36,7 +36,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
         _ranged_attack_damage = other._ranged_attack_damage;
         _armor_damage_reduction = other._armor_damage_reduction;
     }
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

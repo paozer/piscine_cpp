@@ -23,18 +23,18 @@ Sorcerer& Sorcerer::operator=(const Sorcerer& other)
         _name = other._name;
         _title = other._title;
     }
-    return (*this);
+    return *this;
 }
 
 std::ostream& operator<<(std::ostream& os, const Sorcerer& s)
 {
     os << "I am " << s.getName() << ", " << s.getTitle() << ", and I like ponies!" << std::endl;
-    return (os);
+    return os;
 }
 
 /* ACCESSOR FUNCTIONS */
-std::string Sorcerer::getName() const { return (_name); }
-std::string Sorcerer::getTitle() const { return (_title); }
+std::string Sorcerer::getName() const { return _name; }
+std::string Sorcerer::getTitle() const { return _title; }
 
 /* MEMBER FUNCTIONS */
 void Sorcerer::polymorph(Victim const& v) const { v.getPolymorphed(); }

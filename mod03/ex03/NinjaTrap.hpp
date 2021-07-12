@@ -1,10 +1,10 @@
 #ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#define NINJATRAP_HPP
 
-# include <iostream>
-# include "ClapTrap.hpp" // inheritance
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
+#include <iostream>
+#include "ClapTrap.hpp" // inheritance
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 class NinjaTrap: public ClapTrap
 {

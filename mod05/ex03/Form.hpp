@@ -1,8 +1,8 @@
 #pragma once
 #ifndef FORM_HPP
-# define FORM_HPP
+#define FORM_HPP
 
-# include <iostream>
+#include <iostream>
 
 class Bureaucrat;
 

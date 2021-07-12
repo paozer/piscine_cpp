@@ -1,9 +1,9 @@
 #pragma once
 #ifndef SORCERER_HPP
-# define SORCERER_HPP
+#define SORCERER_HPP
 
-# include <iostream>
-# include "Victim.hpp"
+#include <iostream>
+#include "Victim.hpp"
 
 class Sorcerer
 {

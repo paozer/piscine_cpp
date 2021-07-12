@@ -55,5 +55,5 @@ int main()
         std::cout << "after: " << arr << std::endl;
 
     }
-    return (0);
+    return 0;
 }

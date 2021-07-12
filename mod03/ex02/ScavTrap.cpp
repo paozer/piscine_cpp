@@ -18,7 +18,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
     std::cout << "Assignment ScavTrap Operator" << std::endl;
     ClapTrap::operator=(other);
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

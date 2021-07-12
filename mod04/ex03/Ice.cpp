@@ -10,7 +10,7 @@ Ice::Ice(const Ice& other) : AMateria("ice") { *this = other; }
 Ice& Ice::operator=(const Ice& other)
 {
     AMateria::operator=(other);
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */
@@ -20,4 +20,4 @@ void Ice::use(ICharacter& target)
     std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 
-AMateria* Ice::clone() const { return (new Ice()); }
+AMateria* Ice::clone() const { return new Ice(); }

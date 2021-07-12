@@ -1,8 +1,8 @@
 #ifndef ZOMBIEHORDE_HPP
-# define ZOMBIEHORDE_HPP
+#define ZOMBIEHORDE_HPP
 
-# include <iostream>
-# include "Zombie.hpp"
+#include <iostream>
+#include "Zombie.hpp"
 
 class ZombieHorde
 {

@@ -60,5 +60,5 @@ int main()
     identify_from_reference(c);
     identify_from_reference(base);
 
-    return (0);
+    return 0;
 }

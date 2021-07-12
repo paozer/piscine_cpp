@@ -1,9 +1,9 @@
 #ifndef ZOMBIE_EVENT_HPP
-# define ZOMBIE_EVENT_HPP
+#define ZOMBIE_EVENT_HPP
 
-# include "Zombie.hpp"
-# include <iostream>
-# include <cstdlib>
+#include "Zombie.hpp"
+#include <iostream>
+#include <cstdlib>
 
 class ZombieEvent
 {

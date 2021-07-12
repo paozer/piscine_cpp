@@ -77,5 +77,5 @@ int main()
             std::cout << s1[i];
         std::cout << std::endl;
     }
-    return (0);
+    return 0;
 }

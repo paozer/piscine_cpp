@@ -1,9 +1,9 @@
 #ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-# include <string>
-# include <iostream>
-# include <cstdlib> // rand(), srand()
+#include <string>
+#include <iostream>
+#include <cstdlib> // rand(), srand()
 
 class ScavTrap
 {

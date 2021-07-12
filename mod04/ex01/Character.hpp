@@ -1,10 +1,10 @@
 #pragma once
 #ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#define CHARACTER_HPP
 
-# include <iostream>
-# include "AWeapon.hpp"
-# include "Enemy.hpp"
+#include <iostream>
+#include "AWeapon.hpp"
+#include "Enemy.hpp"
 
 class Character
 {

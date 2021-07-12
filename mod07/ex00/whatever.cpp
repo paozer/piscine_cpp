@@ -12,16 +12,16 @@ template <typename T>
 T max(const T & a, const T & b)
 {
     if (a > b)
-        return (a);
-    return (b);
+        return a;
+    return b;
 }
 
 template <typename T>
 T min(const T & a, const T & b)
 {
     if (a < b)
-        return (a);
-    return (b);
+        return a;
+    return b;
 }
 
 int main()
@@ -63,5 +63,5 @@ int main()
         swap(a, a);
         std::cout << " a = " << a << std::endl;
     }
-    return (0);
+    return 0;
 }

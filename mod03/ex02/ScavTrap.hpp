@@ -1,10 +1,10 @@
 #ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-# include <string>
-# include <iostream>
-# include <cstdlib> // rand(), srand()
-# include "ClapTrap.hpp" // inheritance
+#include <string>
+#include <iostream>
+#include <cstdlib> // rand(), srand()
+#include "ClapTrap.hpp" // inheritance
 
 class ScavTrap: public ClapTrap
 {

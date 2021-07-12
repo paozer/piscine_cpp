@@ -1,12 +1,12 @@
 #pragma once
 #ifndef CONVERT_HPP
-# define CONVERT_HPP
+#define CONVERT_HPP
 
-# include <iostream>
-# include <iomanip> // std::fixed, std::setprecision
-# include <climits> // INT_MAX, INT_MIN
-# include <cmath> // HUGE_VAL
-# include <cstring> // strlen
+#include <iostream>
+#include <iomanip> // std::fixed, std::setprecision
+#include <climits> // INT_MAX, INT_MIN
+#include <cmath> // HUGE_VAL
+#include <cstring> // strlen
 
 class Convert
 {

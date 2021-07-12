@@ -14,7 +14,7 @@ Span& Span::operator=(const Span& other)
         _max_size = other._max_size;
         _data = other._data;
     }
-    return (*this);
+    return *this;
 }
 
 void Span::addNumber(int n)
@@ -30,7 +30,7 @@ int Span::longestSpan() const
         throw std::exception();
     int max = *std::max_element(_data.begin(), _data.end());
     int min = *std::min_element(_data.begin(), _data.end());
-    return (abs(max - min));
+    return abs(max - min);
 }
 
 int Span::shortestSpan() const
@@ -44,5 +44,5 @@ int Span::shortestSpan() const
                shorty = abs(_data[i] - _data[j]);
         }
     }
-    return (shorty);
+    return shorty;
 }

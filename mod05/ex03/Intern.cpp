@@ -7,16 +7,16 @@ Intern::Intern() {}
 
 Intern::Intern(const Intern& other) { (void)other; }
 
-Intern& Intern::operator=(const Intern& other) { (void)other; return (*this); }
+Intern& Intern::operator=(const Intern& other) { (void)other; return *this; }
 
 Intern::~Intern() {}
 
 Form* Intern::createRobotomyRequest(const std::string& target)
-{ return (new RobotomyRequestForm(target)); }
+{ return new RobotomyRequestForm(target); }
 Form* Intern::createShrubberyCreation(const std::string& target)
-{ return (new ShrubberyCreationForm(target)); }
+{ return new ShrubberyCreationForm(target); }
 Form* Intern::createPresidentialPardon(const std::string& target)
-{ return (new PresidentialPardonForm(target)); }
+{ return new PresidentialPardonForm(target); }
 
 Form* Intern::makeForm(const std::string& type, const std::string& target)
 {
@@ -27,9 +27,9 @@ Form* Intern::makeForm(const std::string& type, const std::string& target)
     for (int i = 0; i < 3; ++i) {
         if (type == form_type[i]) {
             std::cout << "Intern creates " << target << std::endl;
-            return ((this->*arr[i]) (target));
+            return this->*arr[i] (target);
         }
     }
     std::cout << type << " is unknow as a type of form" << std::endl;
-    return (nullptr);
+    return NULL;
 }

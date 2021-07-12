@@ -16,16 +16,16 @@ Fixed& Fixed::operator=(const Fixed& other)
 {
     if (this != &other)
         _raw = other._raw;
-    return (*this);
+    return *this;
 }
 
-int Fixed::getRawBits() const { return (_raw); }
+int Fixed::getRawBits() const { return _raw; }
 
 void Fixed::setRawBits(int const raw) { _raw = raw;}
 
-int Fixed::toInt() const { return (roundf(_raw >> _binary_point)); }
+int Fixed::toInt() const { return roundf(_raw >> _binary_point); }
 
 // undoes int constructor result
-float Fixed::toFloat() const { return ((float)_raw / (float)(1 << _binary_point)); }
+float Fixed::toFloat() const { return (float)_raw / (float)(1 << _binary_point); }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& f) { return (os << f.toFloat()); }
+std::ostream& operator<<(std::ostream& os, const Fixed& f) { return os << f.toFloat(); }

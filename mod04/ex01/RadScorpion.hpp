@@ -1,9 +1,9 @@
 #pragma once
 #ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#define RADSCORPION_HPP
 
-# include <iostream>
-# include "Enemy.hpp"
+#include <iostream>
+#include "Enemy.hpp"
 
 class RadScorpion: public Enemy
 {

@@ -7,9 +7,9 @@ AssaultTerminator::~AssaultTerminator() { std::cout << "I’ll be back..." << st
 AssaultTerminator::AssaultTerminator(const AssaultTerminator& other) { *this = other; }
 
 AssaultTerminator& AssaultTerminator::operator=(const AssaultTerminator& other)
-{ (void) other; return (*this); }
+{ (void) other; return *this; }
 
-ISpaceMarine* AssaultTerminator::clone() const { return (new AssaultTerminator()); }
+ISpaceMarine* AssaultTerminator::clone() const { return new AssaultTerminator(); }
 
 void AssaultTerminator::battleCry() const { std::cout << "This code is unclean. PURIFY IT!" << std::endl; }
 void AssaultTerminator::rangedAttack() const { std::cout << "* does nothing *" << std::endl; }

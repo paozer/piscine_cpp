@@ -56,5 +56,5 @@ int main(){
     // delete rs; // was called by me on last attack
     std::cout << ">> delete supermutant:" << std::endl;
     delete sm;
-    return (0);
+    return 0;
 }

@@ -15,17 +15,17 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
             if (other._learned_materia[i])
                 _learned_materia[i] = other._learned_materia[i];
             else
-                _learned_materia[i] = nullptr;
+                _learned_materia[i] = NULL;
         }
     }
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */
 void MateriaSource::learnMateria(AMateria* m)
 {
-    if (_size_learned_materia > 3 || m == nullptr)
-        return ;
+    if (_size_learned_materia > 3 || m == NULL)
+        return;
     _learned_materia[_size_learned_materia] = m;
     ++_size_learned_materia;
 }
@@ -34,7 +34,7 @@ AMateria* MateriaSource::createMateria(std::string const& type)
 {
     for (int i = _size_learned_materia - 1; i >= 0; --i) {
         if (_learned_materia[i]->getType() == type)
-            return (_learned_materia[i]->clone());
+            return _learned_materia[i]->clone();
     }
-    return (nullptr);
+    return NULL;
 }

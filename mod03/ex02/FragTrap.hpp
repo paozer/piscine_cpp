@@ -1,10 +1,10 @@
 #ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-# include <string>
-# include <iostream>
-# include <cstdlib> // rand(), srand()
-# include "ClapTrap.hpp" // inheritance
+#include <string>
+#include <iostream>
+#include <cstdlib> // rand(), srand()
+#include "ClapTrap.hpp" // inheritance
 
 class FragTrap: public ClapTrap
 {

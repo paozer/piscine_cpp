@@ -1,14 +1,14 @@
 #include "FragTrap.hpp"
 
 /* CANONICAL FORM */
-FragTrap::FragTrap() :
-    _hit_points(100), _max_hit_points(100), _energy_points(100),
+FragTrap::FragTrap()
+    : _hit_points(100), _max_hit_points(100), _energy_points(100),
     _max_energy_points(100), _level(1), _melee_attack_damage(30),
     _ranged_attack_damage(20), _armor_damage_reduction(5)
 { std::cout << "Default Constructor" << std::endl; }
 
-FragTrap::FragTrap(const std::string& name) :
-    _name(name), _hit_points(100), _max_hit_points(100),
+FragTrap::FragTrap(const std::string& name)
+    : _name(name), _hit_points(100), _max_hit_points(100),
     _energy_points(100), _max_energy_points(100), _level(1),
     _melee_attack_damage(30), _ranged_attack_damage(20),
     _armor_damage_reduction(5)
@@ -36,7 +36,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
         _ranged_attack_damage = other._ranged_attack_damage;
         _armor_damage_reduction = other._armor_damage_reduction;
     }
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */
@@ -53,9 +53,9 @@ void FragTrap::meleeAttack(std::string const& target) const
 
 void FragTrap::vaulthunter_dot_exe(std::string const& target)
 {
-    if (_energy_points < 25)
+    if (_energy_points < 25) {
         std::cout << "There is not enough energy left for the vaulthunter_dot_exe attack." << std::endl;
-    else {
+    } else {
         int rand_attack = rand() % 5;
         int rand_damage = rand() % 100;
         static std::string attack[5] = {"potato", "love", "ninja", "beer", "hacker"};

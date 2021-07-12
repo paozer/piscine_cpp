@@ -18,7 +18,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 {
     std::cout << "Assignment FragTrap Operator" << std::endl;
     ClapTrap::operator=(other);
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

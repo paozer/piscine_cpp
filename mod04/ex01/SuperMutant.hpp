@@ -1,9 +1,9 @@
 #pragma once
 #ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#define SUPERMUTANT_HPP
 
-# include <iostream>
-# include "Enemy.hpp"
+#include <iostream>
+#include "Enemy.hpp"
 
 class SuperMutant: public Enemy
 {

@@ -23,5 +23,5 @@ int main()
     f1.beRepaired(11);
     f2.beRepaired(94);
     std::cout << std::endl;
-    return (0);
+    return 0;
 }

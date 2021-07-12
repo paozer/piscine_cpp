@@ -19,7 +19,7 @@ SuperTrap& SuperTrap::operator=(const SuperTrap& other)
 {
     std::cout << "Assignment SuperTrap Operator" << std::endl;
     ClapTrap::operator=(other);
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

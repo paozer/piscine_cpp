@@ -2,7 +2,7 @@
 
 int main()
 {
-    srand(time(nullptr));
+    srand(time(NULL));
     void* raw = serialize();
     Data* clean = deserialize(raw);
     std::cout << "s1 = " << clean->s1 << std::endl;
@@ -10,5 +10,5 @@ int main()
     std::cout << "n  = " << clean->n << std::endl;
     delete static_cast<char*>(raw);
     delete clean;
-    return (0);
+    return 0;
 }

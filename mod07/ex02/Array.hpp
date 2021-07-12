@@ -1,9 +1,9 @@
 #pragma once
 #ifndef ARRAY_HPP
-# define ARRAY_HPP
+#define ARRAY_HPP
 
-# include <iostream>
-# include <stdexcept>
+#include <iostream>
+#include <stdexcept>
 
 template <typename T>
 class Array
@@ -13,7 +13,7 @@ class Array
 
         ~Array() { delete[] _data; };
 
-        Array(const Array & other) : _data(nullptr) { *this = other; }
+        Array(const Array & other) : _data(NULL) { *this = other; }
 
         Array &operator=(const Array & other)
         {
@@ -24,23 +24,23 @@ class Array
                 for (unsigned int i(0); i < _size; ++i)
                     _data[i] = other._data[i];
             }
-            return (*this);
+            return *this;
         }
 
         T &operator[](size_t i)
         {
             if (indexIsOutOfRange(i))
                 throw std::out_of_range("out_of_range");
-            return (_data[i]);
+            return _data[i];
         }
 
-        unsigned int size() const { return (_size); }
+        unsigned int size() const { return _size; }
 
     private:
         unsigned int _size;
         T *_data;
 
-        bool indexIsOutOfRange(unsigned int i) { return (_size <= i); }
+        bool indexIsOutOfRange(unsigned int i) { return _size <= i; }
 };
 
 #endif

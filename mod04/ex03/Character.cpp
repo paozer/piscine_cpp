@@ -21,10 +21,10 @@ Character& Character::operator=(const Character& other)
             if (other._inventory[i])
                 _inventory[i] = other._inventory[i]->clone();
             else
-                _inventory[i] = nullptr;
+                _inventory[i] = NULL;
         }
     }
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */
@@ -37,7 +37,7 @@ void Character::deleteInventory()
 
 void Character::equip(AMateria* m)
 {
-    if (_inventory_size == 4 || m == nullptr)
+    if (_inventory_size == 4 || m == NULL)
         return ;
     int i = 0;
     while (i < 4 && _inventory[i])
@@ -51,7 +51,7 @@ void Character::unequip(int idx)
     if (idx < 0 || 3 < idx)
         return ;
     if (_inventory[idx]) {
-        _inventory[idx] = nullptr;
+        _inventory[idx] = NULL;
         --_inventory_size;
     }
 }
@@ -64,4 +64,4 @@ void Character::use(int idx, ICharacter& target)
         _inventory[idx]->use(target);
 }
 
-std::string const& Character::getName() const { return (_name); }
+std::string const& Character::getName() const { return _name; }

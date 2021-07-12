@@ -73,5 +73,5 @@ int main()
         delete toast;
         delete car;
     }
-    return (0);
+    return 0;
 }

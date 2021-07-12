@@ -1,8 +1,8 @@
 #pragma once
 #ifndef VICTIM_HPP
-# define VICTIM_HPP
+#define VICTIM_HPP
 
-# include <iostream>
+#include <iostream>
 
 class Victim
 {

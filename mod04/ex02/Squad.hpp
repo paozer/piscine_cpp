@@ -1,9 +1,9 @@
 #pragma once
 #ifndef SQUAD_HPP
-# define SQUAD_HPP
+#define SQUAD_HPP
 
-# include <iostream>
-# include "ISquad.hpp"
+#include <iostream>
+#include "ISquad.hpp"
 
 class Squad: public ISquad
 {

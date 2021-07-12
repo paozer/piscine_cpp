@@ -21,7 +21,7 @@ int main()
             cur->meleeAttack();
         }
         std::cout << "push duplicate >> oldsize[" << vlc->getCount() << "] newsize[" << vlc->push(bob) << "]" << std::endl;
-        std::cout << "push nullptr >> oldsize[" << vlc->getCount() << "] newsize[" << vlc->push(nullptr) << "]" << std::endl;
+        std::cout << "push NULL >> oldsize[" << vlc->getCount() << "] newsize[" << vlc->push(NULL) << "]" << std::endl;
         delete vlc;
     }
     {

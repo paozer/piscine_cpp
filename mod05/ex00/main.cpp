@@ -49,5 +49,5 @@ int main()
         ++*tom;
     std::cout << "after " << i << " incrementation: " << *tom;
     delete tom;
-    return (0);
+    return 0;
 }

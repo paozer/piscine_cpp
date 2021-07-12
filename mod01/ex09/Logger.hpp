@@ -1,10 +1,10 @@
 #ifndef LOGGER_HPP
-# define LOGGER_HPP
+#define LOGGER_HPP
 
-# include <iostream>
-# include <fstream>
-# include <sstream>
-# include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
 
 class Logger
 {

@@ -1,8 +1,8 @@
 void memoryLeak();
 
-int main(void)
+int main()
 {
 	memoryLeak();
 	while (1) ;
-	return (0);
+	return 0;
 }

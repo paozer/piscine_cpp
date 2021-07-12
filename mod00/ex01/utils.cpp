@@ -1,7 +1,7 @@
 #include "Contact.hpp"
 #include <iostream>
 
-void    print_f(std::string str);
+void print_f(std::string str);
 
 Contact create_contact_from_input()
 {
@@ -13,10 +13,10 @@ Contact create_contact_from_input()
         std::cout << message[i];
         std::getline(std::cin, info[i]);
     }
-    return (Contact(info));
+    return Contact(info);
 }
 
-void    display_all_contacts(Contact pb[], int &pb_size)
+void display_all_contacts(Contact pb[], int &pb_size)
 {
     std::string header[4] = {"Index", "First Name", "Last Name", "Login"};
 
@@ -32,7 +32,7 @@ void    display_all_contacts(Contact pb[], int &pb_size)
     }
 }
 
-void    print_f(std::string str)
+void print_f(std::string str)
 {
     if (str.length() > 10)
         std::cout << '|' << str.substr(0, 9) << '.';

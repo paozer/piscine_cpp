@@ -42,5 +42,5 @@ int main()
     }
     delete tom;
     delete contract;
-    return (0);
+    return 0;
 }

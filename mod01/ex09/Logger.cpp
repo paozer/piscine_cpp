@@ -4,7 +4,7 @@ std::string getTimestamp();
 
 Logger::Logger(std::string log_file) : _log_file(log_file) {}
 
-void        Logger::log(std::string const& dest, std::string const& message)
+void Logger::log(std::string const& dest, std::string const& message)
 {
     std::string des[] = { "logToConsole", "logToFile" };
     typedef void (Logger::*logFuncPtr) (std::string message);
@@ -18,21 +18,21 @@ void        Logger::log(std::string const& dest, std::string const& message)
     }
 }
 
-void        Logger::logToConsole(std::string message) { std::cout << makeLogEntry(message); }
+void Logger::logToConsole(std::string message) { std::cout << makeLogEntry(message); }
 
-void        Logger::logToFile(std::string message)
+void Logger::logToFile(std::string message)
 {
     std::ofstream fs (_log_file, std::ofstream::app);
     fs << makeLogEntry(message);
 }
 
-std::string Logger::makeLogEntry(std::string message) { return ("[" + getTimestamp() + "] " + message + "\n"); }
+std::string Logger::makeLogEntry(std::string message) { return "[" + getTimestamp() + "] " + message + "\n"; }
 
-std::string getTimestamp(void)
+std::string getTimestamp()
 {
-    time_t              rawtime;
-    struct tm*          timeinfo;
-    std::stringstream   timestamp;
+    time_t rawtime;
+    struct tm* timeinfo;
+    std::stringstream timestamp;
 
     time (&rawtime);
     timeinfo = localtime (&rawtime);
@@ -43,5 +43,5 @@ std::string getTimestamp(void)
     timestamp << std::setw(2) << std::setfill('0') << timeinfo->tm_hour;
     timestamp << std::setw(2) << std::setfill('0') << timeinfo->tm_min;
     timestamp << std::setw(2) << std::setfill('0') << timeinfo->tm_sec;
-    return (timestamp.str());
+    return timestamp.str();
 }

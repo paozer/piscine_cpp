@@ -1,9 +1,9 @@
 #pragma once
 #ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
-# include <fstream>
-# include "Form.hpp"
+#include <fstream>
+#include "Form.hpp"
 
 class ShrubberyCreationForm: public Form
 {

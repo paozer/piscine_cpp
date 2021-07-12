@@ -8,7 +8,7 @@ int main(int ac, char *av[])
     if (ac != 4 || strlen(av[1]) == 0 || strlen(av[2]) == 0 || strlen(av[3]) == 0) {
         std::cerr << "Usage:" << std::endl << "./replace <filename> <s1> <s2>" << std::endl;
         std::cerr << "arguments cannot be empty." << std::endl;
-        return (1);
+        return 1;
     }
     // SETUP STREAMS & VARIABLES
     std::string line;
@@ -18,7 +18,7 @@ int main(int ac, char *av[])
     std::ifstream infile(filename);
     if (!infile.is_open()) {
         std::cerr << filename << " could not be opened!" << std::endl;
-        return (1);
+        return 1;
     }
     std::ofstream outfile(filename += ".REPLACE");
     // READ & REPLACE & WRITE
@@ -29,5 +29,5 @@ int main(int ac, char *av[])
         }
         outfile << line << std::endl;
     }
-    return (0);
+    return 0;
 }

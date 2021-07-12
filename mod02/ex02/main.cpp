@@ -2,7 +2,8 @@
 #include <iomanip>
 #include "Fixed.hpp"
 
-int main(void) {
+int main()
+{
     Fixed a (4.32f);
     Fixed b (4.20f);
     Fixed c (4);

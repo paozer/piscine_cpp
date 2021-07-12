@@ -19,29 +19,29 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
     if (this != &other)
         _grade = other._grade;
-    return (*this);
+    return *this;
 }
 
 Bureaucrat::~Bureaucrat() {}
 
 /* MEMBER FUNCTIONS */
-std::string Bureaucrat::getName() const { return (_name); }
+std::string Bureaucrat::getName() const { return _name; }
 
-int Bureaucrat::getGrade() const { return (_grade); }
+int Bureaucrat::getGrade() const { return _grade; }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
-{ return (os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl); }
+{ return os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl; }
 
 Bureaucrat& Bureaucrat::operator++()
 {
     if (_grade > 1)
         --_grade;
-    return (*this);
+    return *this;
 }
 
 Bureaucrat& Bureaucrat::operator--()
 {
     if (_grade < 150)
         ++_grade;
-    return (*this);
+    return *this;
 }

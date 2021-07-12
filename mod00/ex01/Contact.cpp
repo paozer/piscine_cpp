@@ -9,9 +9,9 @@ Contact::Contact(std::string info[11]) :
     _darkest_secret(info[10])
 {}
 
-std::string Contact::getFirstName(void) { return (_first_name); }
-std::string Contact::getLastName(void) { return (_last_name); }
-std::string Contact::getLogin(void) { return (_login); }
+std::string Contact::getFirstName(void) { return _first_name; }
+std::string Contact::getLastName(void) { return _last_name; }
+std::string Contact::getLogin(void) { return _login; }
 
 void Contact::str()
 {

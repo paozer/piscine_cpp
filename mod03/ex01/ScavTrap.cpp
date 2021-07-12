@@ -37,7 +37,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
         _ranged_attack_damage = other._ranged_attack_damage;
         _armor_damage_reduction = other._armor_damage_reduction;
     }
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */
@@ -53,9 +53,9 @@ void ScavTrap::meleeAttack(std::string const& target) const
 
 void ScavTrap::challengeNewcomer(std::string const& target)
 {
-    if (_energy_points < 25)
+    if (_energy_points < 25) {
         std::cout << "SC4V-TP " << _name << " has not enough energy left to challenge anybody." << std::endl;
-    else {
+    } else {
         int rand_challenge = rand() % 5;
         int rand_damage = rand() % 100;
         static std::string challenge[5] = {"potato", "love", "ninja", "beer", "hacker"};

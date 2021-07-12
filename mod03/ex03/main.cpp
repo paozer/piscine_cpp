@@ -100,5 +100,5 @@ int main(void)
     n1.beRepaired(11);
     n2.beRepaired(0);
     std::cout << std::endl;
-    return (0);
+    return 0;
 }

@@ -75,5 +75,5 @@ int main(void)
     s1.beRepaired(11);
     s2.beRepaired(94);
     std::cout << std::endl;
-    return (0);
+    return 0;
 }

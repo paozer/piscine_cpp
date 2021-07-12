@@ -1,8 +1,8 @@
 #ifndef PLASMARIFLE_HPP
-# define PLASMARIFLE_HPP
+#define PLASMARIFLE_HPP
 
-# include <iostream>
-# include "AWeapon.hpp"
+#include <iostream>
+#include "AWeapon.hpp"
 
 class PlasmaRifle: public AWeapon
 {

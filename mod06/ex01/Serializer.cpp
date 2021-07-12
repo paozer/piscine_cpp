@@ -6,7 +6,7 @@ void* serialize()
     fillArrayRandAlnum(ret, STRING_SIZE);
     fillArrayRandAlnum(ret + STRING_SIZE + sizeof(int), STRING_SIZE);
     *(reinterpret_cast<int*>(ret + STRING_SIZE)) = rand();
-    return (ret);
+    return ret;
 }
 
 Data* deserialize(void * raw)
@@ -15,7 +15,7 @@ Data* deserialize(void * raw)
     ret->s1 = std::string (static_cast<char*>(raw), STRING_SIZE);
     ret->s2 = std::string (static_cast<char*>(raw) + STRING_SIZE + sizeof(int), STRING_SIZE);
     ret->n = *reinterpret_cast<int*>(static_cast<char*>(raw) + STRING_SIZE);
-    return (ret);
+    return ret;
 }
 
 void fillArrayRandAlnum(char * str, size_t len)

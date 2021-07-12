@@ -19,7 +19,7 @@ NinjaTrap& NinjaTrap::operator=(const NinjaTrap& other)
 {
     std::cout << "Assignment NinjaTrap Operator" << std::endl;
     ClapTrap::operator=(other);
-    return (*this);
+    return *this;
 }
 
 /* MEMBER FUNCTIONS */

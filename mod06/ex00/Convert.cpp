@@ -18,7 +18,7 @@ Convert& Convert::operator=(const Convert & other)
         _conversion = other._conversion;
         _conversion_error_flag = other._conversion_error_flag;
     }
-    return (*this);
+    return *this;
 }
 
 void Convert::toChar() const

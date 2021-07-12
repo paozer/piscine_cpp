@@ -1,9 +1,9 @@
 #pragma once
 #ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
-# include <iostream>
-# include "Form.hpp"
+#include <iostream>
+#include "Form.hpp"
 
 class RobotomyRequestForm: public Form
 {

@@ -1,8 +1,8 @@
 #pragma once
 #ifndef INTERN_HPP
-# define INTERN_HPP
+#define INTERN_HPP
 
-# include <iostream>
+#include <iostream>
 
 class Form;
 

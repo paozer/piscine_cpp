@@ -1,9 +1,9 @@
 #include "ZombieHorde.hpp"
 #include <iostream>
 
-int main(void)
+int main()
 {
-    std::srand(time(nullptr));
+    std::srand(time(NULL));
     ZombieHorde zh0 = ZombieHorde(5);
     zh0.announce();
     std::cout << std::endl;
@@ -12,5 +12,5 @@ int main(void)
     std::cout << std::endl;
     ZombieHorde zh2 = ZombieHorde(1);
     zh2.announce();
-    return (0);
+    return 0;
 }

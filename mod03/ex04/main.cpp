@@ -14,7 +14,7 @@
 
 int main(void)
 {
-    srand(time(nullptr));
+    srand(time(NULL));
     FragTrap f0 ("f0");
     NinjaTrap n0 ("n0");
     ScavTrap sc0 ("sc0");

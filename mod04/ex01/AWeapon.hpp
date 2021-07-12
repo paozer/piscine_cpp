@@ -1,8 +1,8 @@
 #pragma once
 #ifndef AWEAPON_HPP
-# define AWEAPON_HPP
+#define AWEAPON_HPP
 
-# include <iostream>
+#include <iostream>
 
 class AWeapon
 {

@@ -1,8 +1,8 @@
 #pragma once
 #ifndef ISQUAD_HPP
-# define ISQUAD_HPP
+#define ISQUAD_HPP
 
-# include "ISpaceMarine.hpp"
+#include "ISpaceMarine.hpp"
 
 class ISquad
 {

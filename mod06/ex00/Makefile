@@ -7,7 +7,7 @@ NAME	= convert
 
 CC		= clang++
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RM		= rm -f
 

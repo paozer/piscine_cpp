@@ -1,9 +1,9 @@
 #pragma once
 #ifndef PEON_HPP
-# define PEON_HPP
+#define PEON_HPP
 
-# include <iostream>
-# include "Victim.hpp"
+#include <iostream>
+#include "Victim.hpp"
 
 class Peon: public Victim
 {

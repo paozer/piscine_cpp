@@ -1,9 +1,9 @@
 #pragma once
 #ifndef FORM_HPP
-# define FORM_HPP
+#define FORM_HPP
 
-# include <iostream>
-# include "Bureaucrat.hpp"
+#include <iostream>
+#include "Bureaucrat.hpp"
 
 class Form
 {

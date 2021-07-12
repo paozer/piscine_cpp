@@ -1,12 +1,12 @@
 #pragma once
 #ifndef SPAN_HPP
-# define SPAN_HPP
+#define SPAN_HPP
 
-# include <iostream>
-# include <algorithm>
-# include <climits>
-# include <cstdlib>
-# include <vector>
+#include <iostream>
+#include <algorithm>
+#include <climits>
+#include <cstdlib>
+#include <vector>
 
 class Span
 {
@@ -37,4 +37,3 @@ class Span
 };
 
 #endif
-
